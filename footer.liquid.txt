@@ -42,9 +42,7 @@
 					<div class="newsletter-content">
 						<ul class="footerNav-social">											
 							{%-if settings.social_link_facebook != blank -%}<li><a href="{{settings.social_link_facebook}}" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>	{%-endif-%}
-							{%-if settings.social_link_twitter != blank -%}<li><a href="{{settings.social_link_twitter}}" target="_blank" rel="noopener" title="Twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>	{%-endif-%}
 							{%-if settings.social_link_instagram != blank -%}<li><a href="{{settings.social_link_instagram}}" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>	{%-endif-%}
-							{%-if settings.social_link_google != blank -%}<li><a href="{{settings.social_link_google}}" target="_blank" rel="noopener" title="Google Plus" aria-label="Google Plus"><i class="fa fa-google-plus"></i></a></li>	{%-endif-%}
 							{%-if settings.social_link_youtube != blank -%}<li><a href="{{settings.social_link_youtube}}" target="_blank" rel="noopener" title="Youtube" aria-label="Youtube"><i class="fa fa-youtube-play"></i></a></li>	{%-endif-%}
 						</ul>
 					</div>
@@ -182,13 +180,9 @@
 			</div>
 			<div class="footer-copyright text-center">
 				<div class="container">
-					<p>Copyright © {{ "now" | date: "%Y" }} <a href="{{ shop.url }}"> {{ shop.name }}</a>. 
-						{{ powered_by_link  | replace:'target=', 'rel="nofollow noopener" target=' }}
-					</p>
+					<p>Copyright © {{ "now" | date: "%Y" }} <a href="{{ shop.url }}"> {{ shop.name }}</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </footer>
-
-
