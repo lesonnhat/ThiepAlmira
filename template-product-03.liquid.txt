@@ -433,21 +433,11 @@
 						<div class="tab-content" id="nav-tabContent">
 							<div class="tab-pane fade show active" id="nav-desc" role="tabpanel">
 								<div class="product-description">							
-									<div class="description-content expandable-toggle opened">
+									<div class="description-content opened">
 										{%- assign checkDescript = product.description | strip_html -%}  
 										{%- if checkDescript.size > 0 -%}
 										<div class="description-productdetail">
-											{%-if product.description contains '{' and product.description contains '}' and product.description contains '<hr>' -%}
-											{{ product.description | split: '<hr>' | first }}
-											{%-else-%}
 											{{ product.description }}
-											{%-endif-%}
-										</div>
-										<div class="description-btn">
-											<button class="expandable-content_toggle js_expandable_content">
-												<span class="expandable-content_toggle-icon"></span>
-												<span class="expandable-content_toggle-text">Xem thêm nội dung</span>
-											</button>
 										</div>
 										{%- else -%}
 										<p>Chưa có mô tả cho sản phẩm này</p>
