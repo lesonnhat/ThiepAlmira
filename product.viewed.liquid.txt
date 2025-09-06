@@ -143,33 +143,6 @@
 				<div class="haravan-product-reviews-badge" data-id="{{ product.id }}"> {{rate_number}} </div>
 			</div>	
 			{%- endif -%}
-
-			
-			
-			<div class="wrapper-action-loop ">
-				{%- unless price_zero -%}
-				<p class="proloop--price {% if on_sale %}on-sale{% endif %}  {% if settings.add_to_cart_show%} prices-ctas {%endif%}">
-					<span class="price">{{ product.variants.first.price | money }}</span>
-					{%- if on_sale -%}<span class="price-del">{{ product.variants.first.compare_at_price | money }}</span>		{%- endif -%}
-				</p>
-				{%- endunless -%}
-				{%- if price_zero or check_gift-%}
-					<div class="proloop-actions">
-							<div class="proloop-actions__inner">
-						{%- if check_gift -%}
-						<a href="{{product.url}}" class="btn-proloop btn-proloop-gift"  title="{{product.title}}" >
-							<span>Hàng tặng không bán</span>
-						</a>
-						{%- else -%}
-						<a href="{{settings.prod_pricezero_link}}" 
-							 class="btn-proloop btn-proloop-contact">{{settings.prod_pricezero_title}}	</a>	
-						{%- endif -%}
-						</div>
-					</div>
-				{% else %}
-					{%- if settings.add_to_cart_show -%} {% include 'product-loop--ctas' %}	{%- endif -%}
-				{%- endif -%}
-			</div>
 		</div>
 	</div>
 	<script> var viewed = {{product | json}}; </script>	
