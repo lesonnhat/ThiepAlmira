@@ -1,7 +1,7 @@
 {%-if settings.product_grid_desktop == 'grid-desk-6'-%}
 {%- assign width-desk = '2' -%}
 {%-elsif settings.product_grid_desktop == 'grid-desk-5'-%}
-{%-assign width-desk = 'cus5' -%}
+{%- assign width-desk = '4' -%}
 {%-elsif settings.product_grid_desktop == 'grid-desk-4'-%}
 {%-assign width-desk = '3'-%}
 {%-else-%}
@@ -103,44 +103,51 @@
 			</div>
 			{%-endif-%}
 
-			<div class="product--image">		
-				{% if product.images.size > 1 %}
-				<div class="lazy-img first-image">
-					<picture>
-						<source media="(max-width: 480px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'medium' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width: 481px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img class="lazyload img-loop " data-src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'small' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size > 0 %}{{ product.featured_image.alt | strip_html | escape }}{% else%} {{product.title | strip_html | escape}} {% endif %}"  />
-					</picture>		
-				</div>					
-				<div class="lazy-img second-image hovered-img d-none d-lg-block">	
-					<picture>
-						<source media="(min-width: 481px) and (max-width:767px)" data-srcset="{{ product.images[1] | product_img_url: 'medium' }}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width:768px)" data-srcset="{{ product.images[1] | product_img_url: 'large' }}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img  class="lazyload img-loop " data-src="{{ product.images[1] | product_img_url: 'small' }}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size > 1 %}{{ product.featured_image.alt | strip_html | escape}}{% else%} {{product.title | strip_html | escape}} {% endif %}"/>
-					</picture>
-				</div>
-				{% else %}
-				<div class="lazy-img">
-					<picture>
-						<source media="(max-width: 480px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'medium' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width: 481px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img class="lazyload img-loop " data-src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'small' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size >0 %}{{ product.featured_image.alt | strip_html | escape }}{% else%} {{product.title | strip_html | escape}} {% endif %}"  />
-					</picture>		
-				</div>				
-				{% endif %}
-			</div>
+			<div class="product--image">
+  {% assign fimg = product.featured_image.src %}
+  {% if product.images.size > 1 %}
+    <div class="lazy-img first-image">
+      <picture>
+        <source media="(max-width: 480px)" data-srcset="{{ fimg | product_img_url: '600x600' }}">
+        <source media="(min-width: 481px)" data-srcset="{{ fimg | product_img_url: '1024x1024' }}">
+        <img
+          class="lazyload img-loop"
+          data-sizes="auto"
+          data-src="{{ fimg | product_img_url: '1024x1024' }}"
+          src="{{ 'no_image.jpg' | asset_url }}"
+          alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
+        >
+      </picture>
+    </div>
+
+    {% assign simg = product.images[1].src %}
+    <div class="lazy-img second-image hovered-img d-none d-lg-block">
+      <picture>
+        <source media="(max-width: 767px)" data-srcset="{{ simg | product_img_url: '600x600' }}">
+        <source media="(min-width: 768px)" data-srcset="{{ simg | product_img_url: '1024x1024' }}">
+        <img
+          class="lazyload img-loop"
+          data-sizes="auto"
+          data-src="{{ simg | product_img_url: '1024x1024' }}"
+          src="{{ 'no_image.jpg' | asset_url }}"
+          alt="{{ product.images[1].alt | default: product.title | strip_html | escape }}"
+        >
+      </picture>
+    </div>
+  {% else %}
+    <div class="lazy-img">
+      <img
+        class="lazyload img-loop"
+        data-sizes="auto"
+        data-src="{{ fimg | product_img_url: '1024x1024' }}"
+        src="{{ 'no_image.jpg' | asset_url }}"
+        alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
+      >
+    </div>
+  {% endif %}
+</div>
+
+
 			<div class="quickview-product">
 				<a class="icon-quickview {% if is_preorder_prodloop %}is-preorder{%endif%}" href="javascript:void(0)" name="icon quickview" data-handle="{{product.url}}" title="Xem nhanh"><i class="fa fa-eye" aria-hidden="true"></i></a>
 			</div>
@@ -167,14 +174,6 @@
 			{%- endif -%}
 			<div class="wrapper-action-loop ">
 				{%- unless price_zero -%}
-				<p class="proloop--price {% if on_sale %}on-sale{% endif %}  {% if settings.add_to_cart_show%} prices-ctas {%endif%}">
-					<span class="price">{{ product.variants.first.price | money }}</span>
-					{%- if on_sale -%}			
-					<span class="price-del">{{ product.variants.first.compare_at_price | money }}</span>
-					<span class="pro-percent">-{{price_sale}}%</span>
-					{%- endif -%}
-					{%- if sold_out -%} <span class="prohzt-soldout">Hết hàng</span>{%- endif -%}
-				</p>
 				{%- endunless -%}
 				{%- if price_zero or check_gift-%}
 					<div class="proloop-actions">
@@ -218,6 +217,3 @@
 		});
 	</script>
 </div>
-
-
-
