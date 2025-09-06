@@ -111,7 +111,6 @@
 	{%- if settings.product_related_show -%}	<!-- related -->{% include 'listproduct-related' %}	{%- endif -%}
 	{%- if settings.product_viewed_show-%}    <!-- viewed -->{%- include 'product-viewed'-%}{%- endif -%}
 	<!-- genneral -->
-	<div class="productDetail-linkcopy"><input class="linkToCopy" readonly="readonly" value="{{ shop.url }}{{ product.url }}" id="myInput"></div>
 </div>
 {%- if settings.display_sidebar_bottom_product -%} {%- include 'sidebar-action-product' -%} {%- endif -%}
 {%- include 'modal-preorder' -%}
@@ -120,6 +119,3 @@
 <div class="modal-coupon--backdrop"></div>
 
 <!-- JS PRODUCT -->{% include 'template-product-script'%}
-
-
-

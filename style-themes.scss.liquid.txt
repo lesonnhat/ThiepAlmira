@@ -614,7 +614,7 @@ img.lazyload:not([src]) {visibility: hidden;}
 }
 .wrapperMain_content {
 	min-height: 80vh;
-	padding-bottom: 30px;
+	padding-bottom: 0px;
 	@media(max-width: 1199px) and (min-width: 992px){
 		min-height: 65vh; 
 	}
@@ -4040,7 +4040,7 @@ $borderFt: {{settings.footer-color-title}};
 	}
 }
 .productDetail-recently-viewed{
-	margin-top:40px;
+	margin-top:20px;
 	.productViewed-title h2 {margin:0 0 20px;font-size:24px;text-align: left;}
 	.listProduct-row {margin: 0;}
 	@media(min-width: 768px){
