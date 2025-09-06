@@ -1430,26 +1430,53 @@ $lineColor: {{settings.topbar_text_color}};
 				&>li >a{font-size: 13px;}
 			}
 		}
-		.menuList-submain{
-			li{
-				position: relative;
-				a {padding: 5px 22px;text-align: left;display: block;font-size: 14px;font-weight: 500;color:var(--shop-color-text);opacity:0.85;}
-				a svg {
-					width: 15px;
-					position: absolute;right: 15px;top: 50%;
-					-ms-transform:translateY(-50%);
-					-webkit-transform:translateY(-50%);
-					transform:translateY(-50%);
-					-webkit-transition: right 0.3s ease-in-out;
-					-ms-transition:right 0.3s ease-in-out;
-					transition: right 0.3s ease-in-out;
-				}
-				a:hover svg{right:10px; opacity: 0.8;}
-			}
-			li.has-submenu{padding-right:30px}
-			/*li:not(:first-child){	border-top: 1px solid #ecf0f1}*/
-			li a:hover,li a:hover i{opacity:1;}
-		}
+    
+		/* Submenu hover */
+    .menuList-submain {
+      li {
+        position: relative;
+      }
+    
+      li > a {
+        display: block;
+        padding: 8px 22px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--shop-color-text);
+        opacity: .85;
+        border-radius: 0px; /* không bo viền */
+        transition: color .2s ease, background-color .2s ease, opacity .2s ease;
+      }
+    
+      /* icon mũi tên */
+      li > a svg{
+        width: 15px;
+        position: absolute; right: 15px; top: 50%;
+        transform: translateY(-50%);
+        transition: right .3s ease, opacity .2s ease;
+      }
+    
+      /* hover / focus */
+      li > a:hover,
+      li > a:focus {
+        color: #26769b;
+        background: rgba(38,118,155,.08); /* nền rất nhẹ */
+        opacity: 1;
+      }
+      li > a:hover svg,
+      li > a:focus svg { right: 10px; opacity: .9; }
+      /* nếu icon là SVG path, đổi màu luôn */
+      li > a:hover svg path,
+      li > a:focus svg path { fill: #26769b; stroke: #26769b; }
+    
+      /* accessibility */
+      li > a:focus-visible {
+        outline: 2px solid rgba(38,118,155,.35);
+        outline-offset: 2px;
+      }
+    }
+
 	}
 	.header-wrap-logo{
 		h1,a {
