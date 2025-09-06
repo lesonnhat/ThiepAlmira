@@ -172,26 +172,6 @@
 				<div class="haravan-product-reviews-badge" data-id="{{ product.id }}"> {{rate_number}} </div>
 			</div>	
 			{%- endif -%}
-			<div class="wrapper-action-loop ">
-				{%- unless price_zero -%}
-				{%- endunless -%}
-				{%- if price_zero or check_gift-%}
-					<div class="proloop-actions">
-							<div class="proloop-actions__inner">
-						{%- if check_gift -%}
-						<a href="{{product.url}}" class="btn-proloop btn-proloop-gift"  title="{{product.title}}" >
-							<span>Hàng tặng không bán</span>
-						</a>
-						{%- else -%}
-						<a href="{{settings.prod_pricezero_link}}" 
-							 class="btn-proloop btn-proloop-contact">{{settings.prod_pricezero_title}}	</a>	
-						{%- endif -%}
-						</div>
-					</div>
-				{% else %}
-					{%- if settings.add_to_cart_show -%} {% include 'product-loop--ctas' %}	{%- endif -%}
-				{%- endif -%}
-			</div>
 		</div>
 	</div>
 	<script async>
