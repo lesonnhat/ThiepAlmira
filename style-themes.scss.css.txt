@@ -1372,7 +1372,7 @@ $lineColor: {{settings.topbar_text_color}};
 					position: relative;z-index: 2;
 					display: block;padding:15px 0px;
 					width: 100%;letter-spacing:0.75px;
-					font-weight: 300;font-size: 14px;
+					font-weight: 400;font-size: 14px;
 					-webkit-transition:none;transition:none;
 					svg {
 						display: inline-block;vertical-align: middle;margin-left: 0;
