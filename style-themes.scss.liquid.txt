@@ -6016,7 +6016,7 @@ $borderFt: {{settings.footer-color-title}};
 		}
 		&.is-expandable{
 			.collection-desc__view{display:block}
-			.collection-desc__info{	height:100px;	overflow: hidden;	}
+			.collection-desc__info{	height:auto;	overflow: hidden;	}
 		}
 	}
 	&.banner-header{padding:0;}

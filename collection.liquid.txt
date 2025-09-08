@@ -31,7 +31,6 @@
 						{%- if collection.description != blank -%}
 						<div class="collection-desc">
 							<div class="collection-desc__info">{{ collection.description }}</div>
-							<p class="collection-desc__view "><span>Xem thêm >></span>	</p>
 						</div>
 						{%- endif -%}
 					</div>
@@ -45,7 +44,6 @@
 						{%- if collection.description != blank -%}
 						<div class="collection-desc">
 							<div class="collection-desc__info">{{ collection.description }}</div>
-							<p class="collection-desc__view "><span>Xem thêm >></span>	</p>
 						</div>
 						{%- endif -%}
 					</div>
