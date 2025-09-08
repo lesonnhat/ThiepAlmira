@@ -1968,6 +1968,7 @@ $lineColor: {{settings.topbar_text_color}};
 	}
 	@media(max-width:991px){
 		.header-wrap-logo {
+      transform: translateX(-15px);
 			flex: 1 1 auto;-ms-flex: 1 1 auto;
 			text-align:left;
 			max-width:100%;
