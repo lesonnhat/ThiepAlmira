@@ -614,7 +614,7 @@ img.lazyload:not([src]) {visibility: hidden;}
 }
 .wrapperMain_content {
 	min-height: 80vh;
-	padding-bottom: 0px;
+	padding-bottom: 30px;
 	@media(max-width: 1199px) and (min-width: 992px){
 		min-height: 65vh; 
 	}
