@@ -104,49 +104,39 @@
 			{%-endif-%}
 
 			<div class="product--image">
-  {% assign fimg = product.featured_image.src %}
-  {% if product.images.size > 1 %}
-    <div class="lazy-img first-image">
-      <picture>
-        <source media="(max-width: 480px)" data-srcset="{{ fimg | product_img_url: '600x600' }}">
-        <source media="(min-width: 481px)" data-srcset="{{ fimg | product_img_url: '1024x1024' }}">
-        <img
-          class="lazyload img-loop"
-          data-sizes="auto"
-          data-src="{{ fimg | product_img_url: '1024x1024' }}"
-          src="{{ 'no_image.jpg' | asset_url }}"
-          alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
-        >
-      </picture>
-    </div>
-
-    {% assign simg = product.images[1].src %}
-    <div class="lazy-img second-image hovered-img d-none d-lg-block">
-      <picture>
-        <source media="(max-width: 767px)" data-srcset="{{ simg | product_img_url: '600x600' }}">
-        <source media="(min-width: 768px)" data-srcset="{{ simg | product_img_url: '1024x1024' }}">
-        <img
-          class="lazyload img-loop"
-          data-sizes="auto"
-          data-src="{{ simg | product_img_url: '1024x1024' }}"
-          src="{{ 'no_image.jpg' | asset_url }}"
-          alt="{{ product.images[1].alt | default: product.title | strip_html | escape }}"
-        >
-      </picture>
-    </div>
-  {% else %}
-    <div class="lazy-img">
-      <img
-        class="lazyload img-loop"
-        data-sizes="auto"
-        data-src="{{ fimg | product_img_url: '1024x1024' }}"
-        src="{{ 'no_image.jpg' | asset_url }}"
-        alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
-      >
-    </div>
-  {% endif %}
-</div>
-
+        {% assign fimg = product.featured_image.src %}
+      
+        <!-- Ảnh chính -->
+        <div class="lazy-img first-image">
+          <img
+            class="img-loop"
+            src="{{ fimg | product_img_url: '600x600' }}"
+            srcset="{{ fimg | product_img_url: '600x600' }} 600w,
+                    {{ fimg | product_img_url: '1024x1024' }} 1024w"
+            sizes="(max-width: 480px) 600px, 1024px"
+            alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
+            loading="lazy"
+            decoding="async"
+            width="1024" height="1024">
+        </div>
+      
+        {% if product.images.size > 1 %}
+          {% assign simg = product.images[1].src %}
+          <!-- Ảnh hover (chỉ desktop) -->
+          <div class="lazy-img second-image hovered-img d-none d-lg-block">
+            <img
+              class="img-loop"
+              src="{{ simg | product_img_url: '600x600' }}"
+              srcset="{{ simg | product_img_url: '600x600' }} 600w,
+                      {{ simg | product_img_url: '1024x1024' }} 1024w"
+              sizes="1024px"
+              alt="{{ product.images[1].alt | default: product.title | strip_html | escape }}"
+              loading="lazy"
+              decoding="async"
+              width="1024" height="1024">
+          </div>
+        {% endif %}
+      </div>
 
 			<div class="quickview-product">
 				<a class="icon-quickview {% if is_preorder_prodloop %}is-preorder{%endif%}" href="javascript:void(0)" name="icon quickview" data-handle="{{product.url}}" title="Xem nhanh"><i class="fa fa-eye" aria-hidden="true"></i></a>
