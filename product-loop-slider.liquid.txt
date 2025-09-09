@@ -83,21 +83,23 @@
 			
 			{%- assign fimg = product.featured_image.src -%}
       <div class="product--image">
-        <div class="lazy-img first-image" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
-          <img
-            class="img-loop"
-            src="{{ fimg | product_img_url: 'medium' }}"      {# ~480px #}
-            srcset="
-              {{ fimg | product_img_url: 'small' }} 240w,
-              {{ fimg | product_img_url: 'medium' }} 480w,
-              {{ fimg | product_img_url: 'large' }} 600w,
-              {{ fimg | product_img_url: '1024x1024' }} 1024w"
-            sizes="(max-width: 480px) 240px, 480px"
-            alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
-            loading="lazy" decoding="async">
-        </div>
+        {% if product.images.size > 1 %}
+          {%- assign fimg = product.featured_image.src -%}
+          <div class="lazy-img first-image" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
+            <img
+              class="img-loop"
+              src="{{ fimg | product_img_url: 'medium' }}"   {# ~480px #}
+              srcset="
+                {{ fimg | product_img_url: 'small' }} 240w,
+                {{ fimg | product_img_url: 'medium' }} 480w,
+                {{ fimg | product_img_url: 'large' }} 600w,
+                {{ fimg | product_img_url: '1024x1024' }} 1024w"
+              sizes="(max-width: 480px) 224px, (max-width: 1199px) 300px, 480px"
+              alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
+              loading="lazy" decoding="async"
+              width="1024" height="1024">
+          </div>
       
-        {%- if product.images.size > 1 -%}
           {%- assign simg = product.images[1].src -%}
           <div class="lazy-img second-image hovered-img d-none d-lg-block" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
             <img
@@ -108,11 +110,28 @@
                 {{ simg | product_img_url: 'medium' }} 480w,
                 {{ simg | product_img_url: 'large' }} 600w,
                 {{ simg | product_img_url: '1024x1024' }} 1024w"
-              sizes="480px"
+              sizes="(max-width: 1199px) 300px, 480px"
               alt="{{ product.images[1].alt | default: product.title | strip_html | escape }}"
-              loading="lazy" decoding="async">
+              loading="lazy" decoding="async"
+              width="1024" height="1024">
           </div>
-        {%- endif -%}
+        {% else %}
+          {%- assign fimg = product.featured_image.src -%}
+          <div class="lazy-img" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
+            <img
+              class="img-loop"
+              src="{{ fimg | product_img_url: 'medium' }}"
+              srcset="
+                {{ fimg | product_img_url: 'small' }} 240w,
+                {{ fimg | product_img_url: 'medium' }} 480w,
+                {{ fimg | product_img_url: 'large' }} 600w,
+                {{ fimg | product_img_url: '1024x1024' }} 1024w"
+              sizes="(max-width: 480px) 224px, (max-width: 1199px) 300px, 480px"
+              alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
+              loading="lazy" decoding="async"
+              width="1024" height="1024">
+          </div>
+        {% endif %}
       </div>
 
 			<div class="quickview-product">
