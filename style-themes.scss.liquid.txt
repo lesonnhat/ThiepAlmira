@@ -1022,7 +1022,7 @@ $lineColor: {{settings.topbar_text_color}};
 	form.searchform input.input-search {
 		height: 44px;line-height:28px;padding: 8px 50px 8px 20px;
 		width: 100%;background:#f6f6f6;border:1px solid #ebebeb;
-		font-size:15px;	font-weight: 500;margin: 0;
+		font-size:15px;	font-weight: 300;margin: 0;
 		display: inline-block;border-radius: 0;
 		-webkit-appearance: none;-moz-appearance: none;	-o-appearance: none;appearance: none; 
 	}
@@ -1372,7 +1372,7 @@ $lineColor: {{settings.topbar_text_color}};
 					position: relative;z-index: 2;
 					display: block;padding:15px 0px;
 					width: 100%;letter-spacing:0.75px;
-					font-weight: 400;font-size: 14px;
+					font-weight: 300;font-size: 14px;
 					-webkit-transition:none;transition:none;
 					svg {
 						display: inline-block;vertical-align: middle;margin-left: 0;
@@ -1442,7 +1442,7 @@ $lineColor: {{settings.topbar_text_color}};
         padding: 8px 22px;
         text-align: left;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 300;
         color: var(--shop-color-text);
         opacity: .85;
         border-radius: 0px; /* không bo viền */
@@ -1968,7 +1968,7 @@ $lineColor: {{settings.topbar_text_color}};
 	}
 	@media(max-width:991px){
 		.header-wrap-logo {
-      transform: translateX(-15px);
+      transform: translateX(-10px);
 			flex: 1 1 auto;-ms-flex: 1 1 auto;
 			text-align:left;
 			max-width:100%;
@@ -9652,18 +9652,12 @@ SIDEBAR ACTION PRODUCT
 }
 {% unless settings.hrloyalty_icon_show %}#hrv-loyalty{display: none!important;}{%endunless%}
 
-.productDetail--content .product-price .pro-title{
-  position: relative;
-  color: transparent;          /* ẩn chữ cũ */
-}
-.productDetail--content .product-price .pro-title::after{
-  content: "Giá 1 chiếc:";
-  position: absolute; left: 0; top: 0;
-  color: var(--shop-color-title);   /* giữ màu cũ */
-}
-
 /* Font áp dụng toàn site */
 body, input, button, textarea,
 h1, h2, h3, .heading, .section-title {
   font-family: 'Montserrat', Arial, sans-serif;
+}
+
+body {
+  font-weight: 300 !important;
 }
