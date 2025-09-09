@@ -36,7 +36,7 @@
 "slide_2": "1",
 
 
-"slide_2_alt": "ALt banner 2",
+"slide_2_alt": "Banner-02",
 
 
 "slide_2_link": "/collections/all",
@@ -57,7 +57,7 @@
 "slide_3": "1",
 
 
-"slide_3_alt": "ALt banner 3",
+"slide_3_alt": "Banner-03",
 
 
 "slide_3_link": "/collections/all",
@@ -492,7 +492,7 @@
 "collection_image_show": true,
 
 
-"collection_sortby": true,
+"collection_sortby": false,
 
 
 "collection_pagination_limit": "20",
@@ -501,19 +501,19 @@
 "show_google_maps": false,
 
 
-"google_maps_code": "<iframe  class=\"lazyload\" data-src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.615593436863!2d106.65415201477133!3d10.76408024232994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eec7752c743%3A0xd832d71bd12b6a15!2zRmxlbWluZ3RvbiBUb3dlciwgMTgyIEzDqiDEkOG6oWkgSMOgbmgsIHBoxrDhu51uZyAxNSwgUXXhuq1uIDExLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1521530731757\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
+"google_maps_code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.708872295099!2d105.83878171189507!3d21.00430398055808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac77667af465%3A0xf7f8eced91353e9d!2zMzUgxJAuIEdp4bqjaSBQaMOzbmcsIFBoxrDGoW5nIE1haSwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1757303377872!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
 
 
 "footer_address": "Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.",
 
 
-"footer_email": "hi@haravan.com",
+"footer_email": "thiepcuoialmira@gmail.com",
 
 
-"footer_phone": "1900.636.099",
+"footer_phone": "0837.33.35.37",
 
 
-"footer_time": "Thứ 2 đến Thứ 6 từ 8h đến 18h;<br> Thứ 7 và Chủ nhật từ 8h00 đến 17h00 ",
+"footer_time": "Buổi sáng (từ 8h - 12h) | Buổi chiều (từ 13h30 - 18h30)",
 
 
 "product_deliverly_show": false,
@@ -540,7 +540,7 @@
 "product_toolbar_show": "1",
 
 
-"product_hotline": "1900.636.099",
+"product_hotline": "0837.33.35.37",
 
 
 "product_text": "Hỏi đáp <br> và điều khoản",
@@ -573,16 +573,16 @@
 "footer_about_information": "",
 
 
-"footer-address": "Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.",
+"footer-address": "Số 35 Giải Phóng, Phường Bạch Mai, TP. Hà Nội",
 
 
-"footer-tell": "1900.000.XXX",
+"footer-tell": "0837.33.35.37",
 
 
-"footer-fax": "1900.636.099",
+"footer-fax": "0837.33.35.37",
 
 
-"footer-email": "hi@home-haven.abc",
+"footer-email": "thiepcuoialmira@gmail.com",
 
 
 "footer_logobct_show": false,
@@ -591,10 +591,10 @@
 "footer_linklist1_show": "1",
 
 
-"footer_linklist1_title": "Hỗ trợ khách hàng",
+"footer_linklist1_title": "Danh mục sản phẩm",
 
 
-"footer_linklist1_menu": "left",
+"footer_linklist1_menu": "danh-muc-san-pham",
 
 
 "footer_main_show": true,
@@ -606,10 +606,10 @@
 "blog_pagination_limit": "4",
 
 
-"shop_text_color": "#252a2b",
+"shop_text_color": "#222222",
 
 
-"shop_title_color": "#26769b",
+"shop_title_color": "#222222",
 
 
 "btn_bg_shop": "#ffffff",
@@ -618,7 +618,7 @@
 "shop_text_hover_color": "#26769b",
 
 
-"base_font": "Quicksand:300,400,500,700",
+"base_font": "Open Sans",
 
 
 "slide_1_show": true,
@@ -870,10 +870,10 @@
 "blogs_menu_show": "1",
 
 
-"blogs_menu_title": "Danh mục bài viết",
+"blogs_menu_title": "Danh mục sản phẩm",
 
 
-"blogs_menu_category": "main-menu",
+"blogs_menu_category": "danh-muc-san-pham",
 
 
 "blogs_news_show": true,
@@ -894,10 +894,10 @@
 "page_menu_show": true,
 
 
-"page_menu_title": "Danh mục page",
+"page_menu_title": "Danh mục sản phẩm",
 
 
-"page_menu_category": "main-menu",
+"page_menu_category": "danh-muc-san-pham",
 
 
 "page_banner_show": true,
@@ -969,10 +969,10 @@
 "addthis_icon4_show": "1",
 
 
-"addthis_icon4_color1": "#fecf72",
+"addthis_icon4_color1": "#58d579",
 
 
-"addthis_icon4_color2": "#ef9f00",
+"addthis_icon4_color2": "#34a853",
 
 
 "addthis_icon4_tootlip": "Xem địa chỉ doanh nghiệp",
@@ -996,7 +996,7 @@
 "home_groupbanner_banner2_url": "/collections/all",
 
 
-"shop_main_color": "#ffbe00",
+"shop_main_color": "#26769b",
 
 
 "home_topbar_txt": "Miễn phí vận chuyển với đơn hàng trên 1000K",
@@ -1080,22 +1080,22 @@
 "google_maps_show": true,
 
 
-"contact_address": "Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.",
+"contact_address": "Số 35 Giải Phóng, Phường Bạch Mai, TP. Hà Nội",
 
 
-"contact_email": " hi@theswan.abc",
+"contact_email": "thiepcuoialmira@gmail.com",
 
 
-"contact_time": "Thứ 2 đến Thứ 6:  từ 8h đến 18h;<br> Thứ 7 và Chủ nhật:  từ 8h00 đến 17h00",
+"contact_time": "Buổi sáng (từ 8h - 12h)<br> Buổi chiều (từ 13h30 - 18h30)",
 
 
-"contact_phone": "1900.000.XXX",
+"contact_phone": "0837.33.35.37",
 
 
 "blogs_pagination_limit": "4",
 
 
-"collection_filter_show": true,
+"collection_filter_show": false,
 
 
 "collection_filter_title": "Bộ lọc",
@@ -1185,7 +1185,7 @@
 "popup_contact_time": "10",
 
 
-"header_home_selected": "header_style2",
+"header_home_selected": "header_style1",
 
 
 "header_01_topbar_bkg": "#cfa978",
@@ -1209,7 +1209,7 @@
 "header_02_color_bkg": "#ffffff",
 
 
-"header_02_color_text": "#000000",
+"header_02_color_text": "#26769b",
 
 
 "header_02_color_hover": "#e8e833",
@@ -1227,10 +1227,10 @@
 "header_03_color_text": "#000000",
 
 
-"hottline_mb": "1900.000.XXX",
+"hottline_mb": "0837.33.35.37",
 
 
-"email_mb": " hi@theswan.abc",
+"email_mb": "thiepcuoialmira@gmail.com",
 
 
 "footer_logobct_alt": "Bộ Công Thương",
@@ -1749,10 +1749,10 @@
 "footer_support_title": "Chăm sóc khách hàng",
 
 
-"footer_support_phone": "1900.636.099",
+"footer_support_phone": "0837.33.35.37",
 
 
-"footer_support_email": "hi@haravan.com",
+"footer_support_email": "thiepcuoialmira@gmail.com",
 
 
 "footer_support_text": "Tổng đài hỗ trợ hoạt động từ T2 đến T6",
@@ -1761,19 +1761,19 @@
 "footer_social_title": "Follow Us",
 
 
-"social_link_facebook": "/",
+"social_link_facebook": "https://www.facebook.com/thiepcuoialmira",
 
 
 "social_link_twitter": "/",
 
 
-"social_link_instagram": "/",
+"social_link_instagram": "https://www.instagram.com/thiepcuoialmira",
 
 
 "social_link_google": "/",
 
 
-"social_link_youtube": "/",
+"social_link_youtube": "https://www.tiktok.com/@thiepcuoialmira",
 
 
 "home_blog_show": true,
@@ -2343,10 +2343,10 @@
 "home_collection_tabs_4_txt": "",
 
 
-"header_03_email": "hi@skyboook",
+"header_03_email": "thiepcuoialmira@gmail.com",
 
 
-"header_03_phone": "1900.636.099",
+"header_03_phone": "0837.33.35.37",
 
 
 "mainmenu_link": "main-menu",
@@ -2358,16 +2358,16 @@
 "footer_linklist2_title": "Liên kết",
 
 
-"footer_linklist2_menu": "main-menu",
+"footer_linklist2_menu": "main-menu-footer",
 
 
 "footer_linklist3_show": true,
 
 
-"footer_linklist3_title": "Chính sách",
+"footer_linklist3_title": "Chính sách khách hàng",
 
 
-"footer_linklist3_menu": "footer",
+"footer_linklist3_menu": "chinh-sach-khach-hang",
 
 
 "footer_linklist4_show": true,
@@ -2379,7 +2379,7 @@
 "footer_linklist4_menu": "footer",
 
 
-"footer_about_desc": "Với các giải pháp công nghệ tốt nhất, Haravan là tất cả những gì bạn cần để xây dựng thương hiệu online, thành công trong bán lẻ và marketing đột phá.",
+"footer_about_desc": "Mỗi tấm thiệp tại Almira Wedding là một mảnh ghép yêu thương, nối liền khoảnh khắc trọng đại bằng sự tinh tế và ý nghĩa.",
 
 
 "footer_contact_title": "Nhóm liên kết 1",
@@ -2466,10 +2466,10 @@
 "about02_services_1_ico.png": "",
 
 
-"about02_services_1_text": "TRẢ GÓP 0% LÃI SUẤT",
+"about02_services_1_text": "Hỗ trợ 24/7",
 
 
-"about02_services_1_desc": " Áp dụng dễ dàng qua thẻ tín dụng của hơn 20 ngân hàng ",
+"about02_services_1_desc": "Hotline hỗ trợ 0837.33.35.37",
 
 
 "about02_services_2_show": true,
@@ -2478,10 +2478,10 @@
 "about02_services_2_ico.png": "",
 
 
-"about02_services_2_text": "GIAO HÀNG 3H",
+"about02_services_2_text": "Ưu đãi phí vận chuyển",
 
 
-"about02_services_2_desc": "Sở hữu ngay món trang sức yêu thích chỉ trong vòng 3 giờ",
+"about02_services_2_desc": "Hỗ trợ 30.000đ cho đơn hàng trên 1.000.000đ",
 
 
 "about02_services_3_show": true,
@@ -2490,25 +2490,25 @@
 "about02_services_3_ico.png": "",
 
 
-"about02_services_3_text": "NGƯỜI BẠN VÀNG",
+"about02_services_3_text": "Thanh toán linh hoạt",
 
 
-"about02_services_3_desc": "Giải pháp tài chính cầm đồ; thu mua kim cương, túi hiệu và đồng hồ cơ",
+"about02_services_3_desc": "Chấp nhận thanh toán COD, Momo, Banking",
 
 
 "about02_services_4_ico.png": "",
 
 
-"about02_services_4_text": "ƯU ĐÃI ĐẾN 2 TRIỆU",
+"about02_services_4_text": "Cam kết đúng tiến độ",
 
 
-"about02_services_4_desc": "Đặt online - nhận ưu đãi tại showroom",
+"about02_services_4_desc": "Hoàn thiện và giao hàng đúng hẹn",
 
 
 "about02_services_4_show": true,
 
 
-"about02_alternate_show": true,
+"about02_alternate_show": false,
 
 
 "about02_alternate_1_show": true,
@@ -2568,10 +2568,10 @@
 "about02_infor_show": true,
 
 
-"about02_infor_title": "VỀ CHÚNG TÔI",
+"about02_infor_title": "Về Almira Wedding",
 
 
-"about02_infor_desc": "Vì sứ mệnh tạo nên những giá trị thương hiệu, chúng tôi đã, đang và sẽ luôn nỗ lực hết mình vì sự phát triển – khẳng định thương hiệu Việt, mang lại những giá trị lâu dài cho doanh nghiệp.<br><br>\n\nVới hệ thống phân phối trải dài từ Bắc vào Nam, sự đa dạng về chủng loại, độc đáo về kiểu dáng, dẫn đầu về xu hướng, nhiều sự lựa chọn về mức giá đã đang và sẽ chiếm được sự tin tưởng và yêu mến của khách hàng trên toàn quốc.",
+"about02_infor_desc": "Tại Almira Wedding, mỗi tấm thiệp cưới là một thông điệp yêu thương, gói trọn niềm hạnh phúc và dấu ấn riêng của từng đôi lứa. Đó không chỉ là lời mời, mà còn là câu chuyện tình yêu được kể bằng thiết kế tinh tế.<br><br>\n\nVới sự sáng tạo và tâm huyết, Almira mang đến những thiệp cưới đẹp vừa sang trọng, vừa ý nghĩa. Chúng tôi đồng hành cùng bạn biến ngày trọng đại thành kỷ niệm đáng nhớ, để mỗi tấm thiệp trở thành minh chứng cho tình yêu bền lâu.",
 
 
 "about03_banner_bkg.jpg": "",
@@ -2823,13 +2823,13 @@
 "about01_infor_img.jpg": "",
 
 
-"shop_article_bg": "#f7fbf9",
+"shop_article_bg": "#f7f7f7",
 
 
-"shop_article_border": "#e0f1e9",
+"shop_article_border": "#ffbe00",
 
 
-"shop_article_link": "#333333",
+"shop_article_link": "#222222",
 
 
 "home_collection_banner.jpg": "",
@@ -3015,7 +3015,7 @@
 "header_topbar_bkg": "#ffffff",
 
 
-"header_topbar_text": "#000000",
+"header_topbar_text": "#26769b",
 
 
 "shop_color_bg": "#ffffff",
@@ -3054,7 +3054,7 @@
 "home-collection3-title": "#ff0000",
 
 
-"add_to_cart_show": true,
+"add_to_cart_show": false,
 
 
 "promotion_hrvapp_use": true,
@@ -3144,7 +3144,7 @@
 "frame_1": "https://file.hstatic.net/200000472671/file/frame2_8b7768d0e0644ec29d632152c004c0be.png",
 
 
-"use_frame_2": true,
+"use_frame_2": false,
 
 
 "tag_frame_2": "promotion_2",
@@ -3711,7 +3711,7 @@
 "book01_services_3_title": "Đặt hàng trực tuyến",
 
 
-"book01_services_3_text": "Hotline : 1900.636.099",
+"book01_services_3_text": "Hotline : 0837.33.35.37",
 
 
 "book01_services_3_img.png": "",
@@ -4278,10 +4278,10 @@
 "about02_information_1_ico.png": "",
 
 
-"about02_information_1_text": "Chúng tôi là ai?",
+"about02_information_1_text": "Công nghệ in hiện đại",
 
 
-"about02_information_1_desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+"about02_information_1_desc": "In ấn sắc nét, màu chuẩn xác, giúp từng tấm thiệp luôn nổi bật và sang trọng.",
 
 
 "about02_information_2_show": true,
@@ -4290,10 +4290,10 @@
 "about02_information_2_ico.png": "",
 
 
-"about02_information_2_text": "Sản phẩm của chúng tôi",
+"about02_information_2_text": "Đội ngũ Designer sáng tạo",
 
 
-"about02_information_2_desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+"about02_information_2_desc": "Sáng tạo không ngừng để mỗi thiết kế thiệp cưới đều mang dấu ấn riêng biệt.",
 
 
 "about02_information_3_show": true,
@@ -4302,10 +4302,10 @@
 "about02_information_3_ico.png": "",
 
 
-"about02_information_3_text": "Chúng ta làm việc như thế nào",
+"about02_information_3_text": "Hoàn thiện tinh xảo",
 
 
-"about02_information_3_desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+"about02_information_3_desc": "Từng chi tiết được chăm chút để mỗi tấm thiệp là một kỷ vật đáng nhớ.",
 
 
 "about02_ecosystem_img.jpg": "",
@@ -4389,7 +4389,7 @@
 "about02_ecosystem_title2": "Chất lượng",
 
 
-"about02_ecosystem_show": true,
+"about02_ecosystem_show": false,
 
 
 "about02_client_img.jpg": "",
@@ -4401,10 +4401,10 @@
 "about02_client_1_img.png": "",
 
 
-"about02_client_1_name": "John Doe - Design",
+"about02_client_1_name": "Huyền Trang - Giáo viên mầm non",
 
 
-"about02_client_1_desc": "“Also Like the fact that I can pick my staples in the brown paper packs and glass containers at the zero waste section, with an idea to reduce plastic and also more convenient.”",
+"about02_client_1_desc": "Thật sự hài lòng với Almira Wedding! Thiệp đẹp, màu chuẩn, giấy xịn. Mọi người dự đám cưới ai cũng khen. ❤️",
 
 
 "about02_client_2_show": true,
@@ -4413,22 +4413,22 @@
 "about02_client_2_img.png": "",
 
 
-"about02_client_2_name": "Smitha - Cunningham Store",
+"about02_client_2_name": "Phạm Trường - Trưởng phòng LG Display",
 
 
-"about02_client_2_desc": "“Also Like the fact that I can pick my staples in the brown paper packs and glass containers at the zero waste section, with an idea to reduce plastic and also more convenient.”",
+"about02_client_2_desc": "Đặt gấp nhưng team vẫn hỗ trợ nhiệt tình, đúng hẹn. Thành phẩm tinh tế, sang trọng hơn mong đợi.",
 
 
-"about02_client_3_show": false,
+"about02_client_3_show": true,
 
 
 "about02_client_3_img.png": "",
 
 
-"about02_client_3_name": "",
+"about02_client_3_name": "Lệ Quyên - Chủ tiệm váy cưới",
 
 
-"about02_client_3_desc": "",
+"about02_client_3_desc": "Thiệp cưới in rất đẹp, cầm chắc tay, thiết kế tinh tế. Bạn bè khen nhiều và mình sẽ giới thiệu thêm.",
 
 
 "about02_client_4_show": false,
@@ -4683,7 +4683,7 @@
 "ldpage01_services_4_title": "Đặt hàng trực tuyến",
 
 
-"ldpage01_services_4_text": "Hotline : 1900.636.099",
+"ldpage01_services_4_text": "Hotline : 0837.33.35.37",
 
 
 "ldpage01_services_4_img.png": "",
@@ -4809,7 +4809,7 @@
 "header_menu_01_color_bkg": "#ffffff",
 
 
-"header_menu_01_color_text": "#333333",
+"header_menu_01_color_text": "#202020",
 
 
 "product_deliverly_txt1": "Chính sách bán hàng",
@@ -4827,7 +4827,7 @@
 "home-collection1-countdown-txt": "#000000",
 
 
-"prod_vendor_show": true,
+"prod_vendor_show": false,
 
 
 "ldpage01_coupon_1_txt": "Mã:",
@@ -4896,10 +4896,10 @@
 "link_home_banner_1": "/collections/all",
 
 
-"title_home_banner_1": "THIỆP CƯỚI LUXURY",
+"title_home_banner_1": "Thiệp Cưới Basic",
 
 
-"btn_home_banner_1": "Xem ngay",
+"btn_home_banner_1": "",
 
 
 "img_home_banner_desktop_2.jpg": "",
@@ -4911,16 +4911,16 @@
 "link_home_banner_2": "/collections/all",
 
 
-"title_home_banner_2": "THIỆP CƯỚI HIỆN ĐẠI",
+"title_home_banner_2": "Thiệp Cưới Luxury",
 
 
-"btn_home_banner_2": "Xem ngay",
+"btn_home_banner_2": "",
 
 
-"content_home_banner_1": "Thiệp cưới Luxury sử dụng chất liệu cao cấp, thiết kế tinh xảo, mang đến vẻ đẹp sang trọng và đẳng cấp, giúp ngày trọng đại của bạn trở nên thật ấn tượng.",
+"content_home_banner_1": "Phong cách tối giản cùng tông màu hài hòa mang lại sự gần gũi và thoải mái. Mẫu thiệp này nhẹ nhàng, tinh tế nhưng vẫn đủ điểm nhấn để ghi dấu trong ngày trọng đại.",
 
 
-"content_home_banner_2": "Thiệp cưới Hiện Đại với phong cách tối giản, thiết kế trẻ trung, hợp xu hướng, mang đến sự tinh tế và hiện đại cho đôi uyên ương.",
+"content_home_banner_2": "Được tạo nên từ chất liệu cao cấp và thiết kế tỉ mỉ, mỗi chi tiết đều toát lên sự sang trọng. Đây là lựa chọn hoàn hảo để thể hiện phong cách đẳng cấp và khác biệt.",
 
 
 "display_home_category": true,
@@ -4935,10 +4935,10 @@
 "img_item_category_1.jpg": "",
 
 
-"link_item_category_1": "/collections/onsale",
+"link_item_category_1": "/collections/thiep-cuoi-hoa-la",
 
 
-"title_item_category_1": "Nội thất cơ bản",
+"title_item_category_1": "Thiệp cưới hoa lá",
 
 
 "use_item_category_2": true,
@@ -4947,10 +4947,10 @@
 "img_item_category_2.jpg": "",
 
 
-"link_item_category_2": "/collections/onsale",
+"link_item_category_2": "/collections/thiep-cuoi-passport",
 
 
-"title_item_category_2": "Không gian phòng khách",
+"title_item_category_2": "Thiệp cưới Passport",
 
 
 "use_item_category_3": true,
@@ -4959,10 +4959,10 @@
 "img_item_category_3.jpg": "",
 
 
-"link_item_category_3": "/collections/all",
+"link_item_category_3": "/collections/thiep-cuoi-hinh-anh",
 
 
-"title_item_category_3": "Trang trí nhà bếp",
+"title_item_category_3": "Thiệp cưới hình ảnh",
 
 
 "use_item_category_4": true,
@@ -4971,10 +4971,10 @@
 "img_item_category_4.jpg": "",
 
 
-"link_item_category_4": "/collections/all",
+"link_item_category_4": "/collections/thiep-cuoi-hien-dai",
 
 
-"title_item_category_4": "Nội thất phòng ngủ",
+"title_item_category_4": "Thiệp cưới hiện đại",
 
 
 "use_item_category_5": true,
@@ -4983,13 +4983,13 @@
 "img_item_category_5.jpg": "",
 
 
-"link_item_category_5": "/collections/all",
+"link_item_category_5": "/collections/thiep-cuoi-truyen-thong",
 
 
-"title_item_category_5": "Dụng cụ nhà tắm",
+"title_item_category_5": "Thiệp cưới truyền thống",
 
 
-"use_item_category_6": true,
+"use_item_category_6": false,
 
 
 "img_item_category_6.jpg": "",
@@ -5031,10 +5031,10 @@
 "title_home_collection_1": "Sản phẩm mới ra mắt",
 
 
-"handle_home_collection_1": "onsale",
+"handle_home_collection_1": "san-pham-moi",
 
 
-"limit_home_collection_1": "10",
+"limit_home_collection_1": "6",
 
 
 "display_home_banner_bottom": true,
@@ -5046,13 +5046,13 @@
 "img_banner_bottom_mobile_1.jpg": "",
 
 
-"title_banner_bottom_1": "Trang trí phòng khách",
+"title_banner_bottom_1": "Ưu đãi mùa cưới",
 
 
-"des_banner_bottom_1": "Trang trí phòng khách đẹp là một công việc thú vị và đầy sáng tạo giúp tạo nên không gian sống đẹp, ấn tượng. Hãy cùng khám phá những ý tưởng trang trí phòng khách đẹp đơn giản nhưng vô cùng ấn tượng.",
+"des_banner_bottom_1": "Nhiều mẫu thiệp, phụ kiện cưới giảm giá trực tiếp và tặng kèm quà thiết kế. Mua theo combo tiết kiệm hơn, có freeship nội thành và hỗ trợ chỉnh sửa miễn phí. Thời gian khuyến mãi có hạn – đặt trước để giữ mẫu và mức giá tốt nhất.",
 
 
-"link_banner_bottom_1": "/collections/all",
+"link_banner_bottom_1": "#",
 
 
 "btn_banner_bottom_1": "Xem ngay",
@@ -5064,13 +5064,13 @@
 "img_banner_bottom_mobile_2.jpg": "",
 
 
-"title_banner_bottom_2": "Trang trí sân vườn",
+"title_banner_bottom_2": "Sản phẩm bắt trend",
 
 
-"des_banner_bottom_2": "Mua sắm các đồ nội thất ban công, vườn là điều mà nhiều gia chủ quan tâm trong thời buổi ngày nay, khi cuộc sống ngày càng trở nên ngột ngạt với nhưng khu nhà cao tầng, đường xá,… mà thiếu vắng cây xanh thì xu hướng tạo nên khu vườn ngay trong nhà hoặc trong khu ban công là điều nhiều người thực hiện.",
+"des_banner_bottom_2": "Bộ sưu tập cập nhật liên tục những mẫu đang hot – màu sắc thời thượng, kiểu chữ tinh gọn, phong cách hiện đại. Chất liệu đẹp, in sắc nét, phù hợp chụp hình. Lướt nhanh để chọn mẫu hợp gu; số lượng giới hạn cho đợt này.",
 
 
-"link_banner_bottom_2": "/collections/all",
+"link_banner_bottom_2": "#",
 
 
 "btn_banner_bottom_2": "Xem ngay",
@@ -5082,7 +5082,7 @@
 "title_home_blog": "Tin tức nổi bật",
 
 
-"handle_home_blog": "news",
+"handle_home_blog": "cam-nang-cuoi",
 
 
 "limit_home_blog": "4",
@@ -5091,10 +5091,10 @@
 "display_home_intro": true,
 
 
-"title_home_intro": "Về Home Haven",
+"title_home_intro": "Về Almira Wedding",
 
 
-"content_home_intro": "Với mong muốn phát triển thương hiệu bằng nội lực, Home Haven đã chú trọng vào thiết kế và sản xuất nội thất hiện đại, thoải mái. Danh mục sản phẩm của Home Haven thường xuyên được đổi mới và cập nhật, liên tục cung cấp cho khách hàng các dòng sản phẩm theo xu hướng mới nhất. Do chính người Việt thiết kế và sản xuất, nội thất thương hiệu Home Haven luôn phù hợp với cuộc sống Á Đông, đem đến sự tiện nghi hoàn hảo trong mọi không gian sống.",
+"content_home_intro": "Mỗi tấm thiệp cưới tại Almira Wedding là một thông điệp yêu thương được gửi gắm trọn vẹn. Không chỉ đơn thuần là lời mời, đó còn là cách kể câu chuyện tình yêu bằng màu sắc, họa tiết và phong cách riêng. Từ nét sang trọng đến sự tinh tế, Almira đồng hành cùng bạn tạo nên những thiệp cưới ý nghĩa, vừa lưu giữ kỷ niệm, vừa mang đến ấn tượng khó quên cho ngày hạnh phúc trọng đại.",
 
 
 "display_home_policy": true,
@@ -5109,7 +5109,7 @@
 "title_item_policy_1": "Hỗ trợ 24/7",
 
 
-"des_item_policy_1": "Hotline hỗ trợ 1900.000.XXX",
+"des_item_policy_1": "Hotline hỗ trợ 0837.33.35.37",
 
 
 "link_item_policy_1": "/pages/about-us",
@@ -5121,10 +5121,10 @@
 "img_item_policy_2.jpg": "",
 
 
-"title_item_policy_2": "Giao hàng miễn phí",
+"title_item_policy_2": "Ưu đãi phí vận chuyển",
 
 
-"des_item_policy_2": "Thời gian giao hàng nhanh chóng, từ 3 - 5 ngày làm việc",
+"des_item_policy_2": "Hỗ trợ 30.000đ cho đơn hàng trên 1.000.000đ",
 
 
 "link_item_policy_2": "/pages/about-us",
@@ -5136,7 +5136,7 @@
 "img_item_policy_3.jpg": "",
 
 
-"title_item_policy_3": "Thanh toán đa dạng",
+"title_item_policy_3": "Thanh toán linh hoạt",
 
 
 "des_item_policy_3": "Chấp nhận thanh toán COD, Momo, Banking",
@@ -5151,10 +5151,10 @@
 "img_item_policy_4.jpg": "",
 
 
-"title_item_policy_4": "Đổi trả hàng dễ dàng",
+"title_item_policy_4": "Cam kết đúng tiến độ",
 
 
-"des_item_policy_4": "Thời gian trả hàng lên tới 30 ngày",
+"des_item_policy_4": "Hoàn thiện và giao hàng đúng hẹn",
 
 
 "link_item_policy_4": "/pages/about-us",
@@ -5181,10 +5181,10 @@
 "title_home_collection_2": "Sản phẩm nổi bật",
 
 
-"handle_home_collection_2": "hot-products",
+"handle_home_collection_2": "san-pham-noi-bat",
 
 
-"limit_home_collection_2": "10",
+"limit_home_collection_2": "6",
 
 
 "bg_color_style_1": "#ffffff",
@@ -5250,7 +5250,7 @@
 "topbar_text_color": "#ffffff",
 
 
-"topbar_text_txt1": "Hotline: <a href=\"tel:1900636000\">1900.636.000</a> (8h - 12h, 13h30 - 17h)",
+"topbar_text_txt1": "Thiệp cưới Almira | Số 35 Giải Phóng, Bạch Mai, Hà Nội | Hotline: <a href=\"tel:0837333537\">0837.33.35.37</a> (8h - 12h, 13h30 - 18h30)",
 
 
 "topbar_text_txt2": "",
@@ -5259,16 +5259,16 @@
 "topbar_text_link": "",
 
 
-"notify_title": "Thông báo của tôi",
+"notify_title": "",
 
 
-"notify_date_start": "10-10-2022",
+"notify_date_start": "",
 
 
-"notify_date_end": "11-15-2023",
+"notify_date_end": "",
 
 
-"notify_limit": "5",
+"notify_limit": "3",
 
 
 "collection_preorder": "dat-truoc",
@@ -5286,7 +5286,7 @@
 "mega_menu_1_text": "Sản phẩm",
 
 
-"mega_menu_1_img_show": true,
+"mega_menu_1_img_show": false,
 
 
 "mega_menu_1_img.jpg": "",
@@ -5376,13 +5376,13 @@
 "sidebar_icon_suport_text": "Tư vấn",
 
 
-"sidebar_icon_noti_show": true,
+"sidebar_icon_noti_show": false,
 
 
 "sidebar_icon_noti_text": "Thông báo",
 
 
-"sidebar_icon_cart_show": true,
+"sidebar_icon_cart_show": false,
 
 
 "sidebar_icon_cart_text": "Giỏ hàng",
@@ -5406,10 +5406,10 @@
 "display_sidebar_bottom_product": false,
 
 
-"payment_footer_title": "Phương thức thanh toán",
+"payment_footer_title": "",
 
 
-"payment_1_show": true,
+"payment_1_show": false,
 
 
 "payment_1_img.png": "",
@@ -5418,7 +5418,7 @@
 "payment_1_alt": "zalo pay",
 
 
-"payment_2_show": true,
+"payment_2_show": false,
 
 
 "payment_2_img.png": "",
@@ -5427,7 +5427,7 @@
 "payment_2_alt": "onepay",
 
 
-"payment_3_show": true,
+"payment_3_show": false,
 
 
 "payment_3_img.png": "",
@@ -5436,7 +5436,7 @@
 "payment_3_alt": "vn-pay",
 
 
-"payment_4_show": true,
+"payment_4_show": false,
 
 
 "payment_4_img.png": "",
@@ -5463,10 +5463,10 @@
 "payment_6_alt": "",
 
 
-"shipment_footer_title": "Phương thức vận chuyển",
+"shipment_footer_title": "",
 
 
-"shipment_1_show": true,
+"shipment_1_show": false,
 
 
 "shipment_1_img.png": "",
@@ -5475,7 +5475,7 @@
 "shipment_1_alt": "ghn",
 
 
-"shipment_2_show": true,
+"shipment_2_show": false,
 
 
 "shipment_2_img.png": "",
@@ -5484,7 +5484,7 @@
 "shipment_2_alt": "ninjavan",
 
 
-"shipment_3_show": true,
+"shipment_3_show": false,
 
 
 "shipment_3_img.png": "",
@@ -5493,7 +5493,7 @@
 "shipment_3_alt": "ahamove",
 
 
-"shipment_4_show": true,
+"shipment_4_show": false,
 
 
 "shipment_4_img.png": "",
@@ -5649,64 +5649,64 @@
 "ldpprod_ecosystem_6_desc": "Lorem ipsum dolor sit amet. Et voluptas optio sit officiis aliquid sit atque fuga est porro veritatis et quia quidem hic voluptatem sint est nihil praesentium. A incidunt nobis et voluptatem galisum cum quos molestiae A incidunt nobis et voluptatem galisum cum quos molestiae voluptatem galisum cum quos molestiae  veritatis et quia quidem hic voluptatem sint est nihil praesentium",
 
 
-"faqs_1_title": "Làm thế nào để tôi đặt hàng online?",
+"faqs_1_title": "01. Chính sách mua hàng",
 
 
-"faqs_1_desc": "The swan rất vui lòng hỗ trợ khách hàng đặt hàng online bằng một trong những cách đặt hàng sau:\n<br>\n- Truy cập trang web: The swan\n<br>\n- Gửi email đặt hàng về địa chỉ: hi@theswan.com\n<br>\n- Liên hệ số hotline: 1900.636.000 để đặt sản phẩm\n<br>\n- Chat với tư vấn viên trên fanpage của The swan",
+"faqs_1_desc": "Khách hàng có thể đặt thiệp trực tiếp trên website hoặc liên hệ qua hotline/zalo để được tư vấn nhanh chóng.",
 
 
-"faqs_2_title": "Nếu tôi đặt hàng trực tuyến có những rủi ro gì không?",
+"faqs_2_title": "02. Chính sách kiểm hàng",
 
 
-"faqs_2_desc": "Với The swan, khách hàng không phải lo lắng, vì chúng tôi cam kết cung cấp sản phẩm chất lượng tốt, giá cả phải chăng. Đặc biệt, khách hàng sẽ nhận được sản phẩm và thanh toán cùng một thời điểm.",
+"faqs_2_desc": "Quý khách được kiểm tra số lượng, mẫu mã và tình trạng sản phẩm khi nhận hàng. Nếu phát hiện lỗi từ nhà sản xuất, Almira sẽ hỗ trợ đổi mới.",
 
 
-"faqs_3_title": "Nếu tôi mua sản phẩm với số lượng nhiều thì giá có được giảm không?",
+"faqs_3_title": "03. Chính sách thanh toán",
 
 
-"faqs_3_desc": "Khi mua hàng với số lượng nhiều khách hàng sẽ được hưởng chế độ ưu đãi, giảm giá ngay tại thời điểm mua hàng. \n<br>\nKhách hàng vui lòng liên hệ Mode để được hỗ trợ trực tiếp qua số điện thoại: 1900.636.000",
+"faqs_3_desc": "Hỗ trợ thanh toán linh hoạt: chuyển khoản, COD hoặc ví điện tử. Với đơn đặt in, yêu cầu đặt cọc trước 50% để tiến hành sản xuất.",
 
 
-"faqs_4_title": "Quy đinh hoàn trả và đổi sản phẩm của Mode như thế nào?",
+"faqs_4_title": "04. Chính sách bảo hành",
 
 
-"faqs_4_desc": "Khách hàng vui lòng tham khảo chính sách đổi trả sản phẩm của The swan để được cung cấp thông tin đầy đủ và chi tiết nhất.\n<br>\nLưu ý: Đối với dòng sản phẩm túi và giày điều kiện đổi trả được thực hiện trong vòng 30 ngày kể từ ngày nhận hàng và hàng hoá đảm bảo còn giữ nguyên tem nhãn sản phẩm. (chưa qua sử dụng)",
+"faqs_4_desc": "Almira cam kết sản phẩm đúng mẫu đã duyệt. Nếu có sai sót về in ấn, màu sắc hoặc lỗi kỹ thuật, chúng tôi sẽ xử lý và in lại trong thời gian sớm nhất.",
 
 
-"faqs_5_title": "Tôi mua hàng rồi, không vừa ý có thể đổi lại hay không? ",
+"faqs_5_title": "05. Ưu đãi khách hàng cũ",
 
 
-"faqs_5_desc": "Khi mua hàng nếu khách hàng không vừa ý với sản phẩm, hãy cho The swan được biết, chúng tôi sẽ đổi ngay sản phẩm cho khách hàng. Chỉ cần đảm bảo sản phẩm chưa qua sử dụng, còn nguyên tem nhãn. Chúng tôi sẽ hỗ trợ đổi (size, màu, sản phẩm khác) cho khách hàng.",
+"faqs_5_desc": "Khách hàng từng sử dụng dịch vụ sẽ được hưởng chiết khấu đặc biệt cho đơn hàng tiếp theo, cùng nhiều ưu đãi trong các dịp lễ – cưới.",
 
 
-"faqs_6_title": "Tôi đã chọn hình thức thanh toán COD, nhưng khi hàng tới nơi, tôi không muốn lấy có được không?",
+"faqs_6_title": "",
 
 
-"faqs_6_desc": "The swan sẵn sàng nhận lại hàng và mong nhận được phản hồi từ quý khách.",
+"faqs_6_desc": "",
 
 
-"faqs_7_title": "Tôi phải trả phí vận chuyển tận nơi như thế nào?",
+"faqs_7_title": "",
 
 
-"faqs_7_desc": "Khách hàng sẽ được miễn phí 100% cước vận chuyển trong nước với đơn hàng trị giá trên 300.000vnd.",
+"faqs_7_desc": "",
 
 
-"faqs_8_title": "Tôi có được đổi sản phẩm mới hoặc hoàn trả tiền không?",
+"faqs_8_title": "",
 
 
-"faqs_8_desc": "Khi hàng hoá thoả điều kiện đổi/ trả, khách sẽ được đổi trả và hoàn tiền trong trường hợp trả hàng hoặc đổi hàng có giá trị thấp hơn",
+"faqs_8_desc": "",
 
 
-"faqs_9_title": "Nếu đổi trả tôi không mang theo hoá đơn và phiếu thông tin sản phẩm thì có được đổi trả không? ",
+"faqs_9_title": "",
 
 
-"faqs_9_desc": "Trường hợp, khách hàng không có hóa đơn hoặc phiếu thông tin sản phẩm, Mode vẫn linh động đổi hoặc trả sản phẩm thông qua Số điện thoại mà Khách hàng đã cung cấp lúc mua hàng.\n<br>\nKhách hàng vui lòng cung cấp Số điện thoại cho nhân viên bán hàng để đối soát lại với hệ thống để được hỗ trợ nhanh chóng. ",
+"faqs_9_desc": "",
 
 
-"faqs_10_title": "Khi đặt hàng online, tôi phải thanh toán như thế nào?",
+"faqs_10_title": "",
 
 
-"faqs_10_desc": " Mode cung cấp đến Khách hàng các hình thức thanh toán linh hoạt như\n<br>\n- COD: Thanh toán trực tiếp khi nhận hàng cho nhân viên bưu điện\n<br>\n- Chuyển khoản\n<br>\nCác hình thức ví điện tử khác",
+"faqs_10_desc": "",
 
 
 "product_faq_show": false,
@@ -5772,10 +5772,10 @@
 "toolbar_bottom_style": "style_02",
 
 
-"prod_variant_show": true,
+"prod_variant_show": false,
 
 
-"toolbar_bottom_selected": "toolbar_style_2",
+"toolbar_bottom_selected": "toolbar_style_1",
 
 
 "toolbar_icon_zalo_bg": "#1272e8",
@@ -5790,7 +5790,7 @@
 "toolbar_icon_phone_bg": "#e81a23",
 
 
-"toolbar_icon_phone_text": "HOTLINE 24/7 1900.636.000",
+"toolbar_icon_phone_text": "HOTLINE 24/7 0837.33.35.37",
 
 
 "toolbar_icon_phone_link": "0837333537",
@@ -5814,13 +5814,13 @@
 "toolbar_icon_stores_link": "/pages/he-thong-cua-hang",
 
 
-"product_contact_btn": "Liên hệ Zalo 0838.33.35.37",
+"product_contact_btn": "Liên hệ Zalo 0837.33.35.37",
 
 
 "product_contact_link": "https://zalo.me/0837333537",
 
 
-"prod_pricezero_title": "Liên hệ Zalo 0838.33.35.37",
+"prod_pricezero_title": "Liên hệ Zalo 0837.33.35.37",
 
 
 "prod_pricezero_link": "https://zalo.me/0837333537",
