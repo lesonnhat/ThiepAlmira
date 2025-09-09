@@ -134,7 +134,7 @@ ul, ol{	padding:0;margin:0;list-style-type:none;}
 	position: relative;	display: inline-block;z-index: 1;overflow: hidden;
 	padding: 8px 24px;	line-height: normal;color: #fff;border-radius: 20px;
 	background-color: var(--shop-color-hover);border: 0;
-	font-size: 13px;font-weight:500; text-align: center;  
+	font-size: 13px;font-weight:300; text-align: center;  
 	letter-spacing: 1px;text-transform: uppercase;outline: none !important;
 	-webkit-transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -3860,7 +3860,7 @@ $borderFt: {{settings.footer-color-title}};
 .section-home-collection{
 	.wraplist-ctas{
 		margin-top:5px;
-		.btn-collection{padding: 10px 30px;font-size:15px;border-radius:4px;}
+		.btn-collection{padding: 10px 15px;font-size:15px;border-radius:5px;}
 		.btn-collection svg{height: 16px; width: 20px;margin-left:2px;fill: currentColor; overflow: hidden;margin-bottom:1px;}
 	}
 	@media(min-width:992px){
@@ -6229,14 +6229,14 @@ body.open-filter {
 	font-size: 14px;
 	margin-top: 15px;
 	padding: 10px 25px;
-	border-radius: 4px;
+	border-radius: 5px;
 	background: transparent;
 	border: 1px solid var(--shop-color-text);
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: 100%;
-	letter-spacing: 2px;
+	letter-spacing: 0px;
 	&:focus {outline:none;color:var(--shop-color-text);}
 	&:hover {color:var(--shop-color-hover); border-color:var(--shop-color-hover);}
 }
