@@ -6004,7 +6004,7 @@ $borderFt: {{settings.footer-color-title}};
 		h1 {font-size: 32px;font-weight: 500; color: var(--shop-color-title);margin:0 0 0;}
 	}
 	.collection-desc{
-		position: relative;padding-bottom:30px;margin-top:12px;
+		position: relative;padding-bottom:10px;margin-top:12px;
 		&__info{
 
 		}
@@ -9660,4 +9660,11 @@ h1, h2, h3, .heading, .section-title {
 
 body {
   font-weight: 300 !important;
+}
+
+/* Show full collection description (fix bị che phần dưới) */
+.wrapper-collection-header .collection-desc__info{
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
