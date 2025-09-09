@@ -8328,8 +8328,8 @@ PAGE FAQS
 	width: 35px;height: 35px; line-height: 35px;border-radius: 50%;
 	float: left;border: 1px solid #ddd;text-align: center;font-size: 15px; 
 }
-.box-info-contact li p {width: calc(100% - 35px);float: left;padding-left: 15px;margin-bottom:5px;color:#696969;font-weight: 500;}
-.box-info-contact li p a{color:#696969;}
+.box-info-contact li p {width: calc(100% - 35px);float: left;padding-left: 15px;margin-bottom:5px;color:#343434;font-weight: 300;}
+.box-info-contact li p a{color:#343434;}
 .box-info-contact li p strong{color:#000;margin-bottom:5px;}
 .wrapbox-contact {
 	display: flex;display: -ms-flex;
@@ -8342,7 +8342,7 @@ PAGE FAQS
 .contact-form .input-group {width: 100%;margin-bottom: 20px;}
 .contact-form .input-group input,
 .contact-form .input-group textarea {
-	color:#5c5c5c;height: 45px;width:100%;font-weight: 500;padding:8px 20px;background: #fff;
+	color:#222222;height: 45px;width:100%;font-weight: 300;padding:8px 20px;background: #fcfcfc;
 	border: 1px solid var(--shop-color-border);border-radius:4px;box-shadow: none;
 	-moz-appearance: none;-webkit-appearance: none;appearance: none;
 }
