@@ -80,44 +80,52 @@
 			</div>
 			{%-endif-%}
 			
-			<div class="product--image">		
-				{% if product.images.size > 1 %}
-				<div class="lazy-img first-image" {% if resizeImg != '' %} style="padding-bottom: {{resizeImg}}" {% endif %}>
-					<picture>
-						<source media="(max-width: 480px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'medium' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width: 481px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img class="lazyload img-loop " data-src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'small' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size > 0 %}{{ product.featured_image.alt | strip_html | escape }}{% else%} {{product.title | strip_html | escape}} {% endif %}"  />
-					</picture>		
-				</div>					
-				<div class="lazy-img second-image hovered-img d-none d-lg-block" {% if resizeImg != '' %} style="padding-bottom: {{resizeImg}}" {% endif %}>	
-					<picture>
-						<source media="(min-width: 481px) and (max-width:767px)" data-srcset="{{ product.images[1] | product_img_url: 'medium' }}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width:768px)" data-srcset="{{ product.images[1] | product_img_url: 'large' }}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img  class="lazyload img-loop " data-src="{{ product.images[1] | product_img_url: 'small' }}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size > 1 %}{{ product.featured_image.alt | strip_html | escape}}{% else%} {{product.title | strip_html | escape}} {% endif %}"/>
-					</picture>
-				</div>
-				{% else %}
-				<div class="lazy-img" {% if resizeImg != '' %} style="padding-bottom: {{resizeImg}}" {% endif %}>
-					<picture>
-						<source media="(max-width: 480px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'medium' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<source media="(min-width: 481px)" data-srcset="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}"
-										srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-						<img class="lazyload img-loop " data-src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'small' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}" 
-								 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-								 alt="{% if product.featured_image.alt.size >0 %}{{ product.featured_image.alt | strip_html | escape }}{% else%} {{product.title | strip_html | escape}} {% endif %}"  />
-					</picture>		
-				</div>				
-				{% endif %}
-			</div>
+			<div class="product--image">
+        {% if product.images.size > 1 %}
+          {%- assign fimg = product.featured_image.src -%}
+          <div class="lazy-img first-image" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
+            <img
+              class="img-loop"
+              src="{{ fimg | product_img_url: 'medium' }}"
+              srcset="
+                {{ fimg | product_img_url: 'small' }} 240w,
+                {{ fimg | product_img_url: 'medium' }} 480w,
+                {{ fimg | product_img_url: 'large' }} 600w"
+              sizes="(max-width: 480px) 240px, 480px"
+              alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
+              loading="lazy" decoding="async">
+          </div>
+      
+          {%- assign simg = product.images[1].src -%}
+          <div class="lazy-img second-image hovered-img d-none d-lg-block" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
+            <img
+              class="img-loop"
+              src="{{ simg | product_img_url: 'medium' }}"
+              srcset="
+                {{ simg | product_img_url: 'small' }} 240w,
+                {{ simg | product_img_url: 'medium' }} 480w,
+                {{ simg | product_img_url: 'large' }} 600w"
+              sizes="480px"
+              alt="{{ product.images[1].alt | default: product.title | strip_html | escape }}"
+              loading="lazy" decoding="async">
+          </div>
+        {% else %}
+          {%- assign fimg = product.featured_image.src -%}
+          <div class="lazy-img" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
+            <img
+              class="img-loop"
+              src="{{ fimg | product_img_url: 'medium' }}"
+              srcset="
+                {{ fimg | product_img_url: 'small' }} 240w,
+                {{ fimg | product_img_url: 'medium' }} 480w,
+                {{ fimg | product_img_url: 'large' }} 600w"
+              sizes="(max-width: 480px) 240px, 480px"
+              alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
+              loading="lazy" decoding="async">
+          </div>
+        {% endif %}
+      </div>
+
 			<div class="quickview-product">
 				<a class="icon-quickview {% if is_preorder_prodloop %}is-preorder{%endif%}" href="javascript:void(0)" data-handle="{{product.url}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
 			</div>
