@@ -9668,3 +9668,9 @@ body {
   max-height: none !important;
   overflow: visible !important;
 }
+
+/* Chỉnh vị trí icon TikTok footer */
+.footerNav-social li a.icon-tiktok svg{
+  transform: translate(2px, -1px); /* +X sang phải 1px, -Y lên trên 1px */
+  display: inline-block;
+}
