@@ -4054,7 +4054,7 @@ $borderFt: {{settings.footer-color-title}};
 	}
 }
 .productDetail-related{
-	margin-top:40px;
+	margin-top:20px;
 	.productRelated-title h2{margin:0 0 20px;font-size:24px;text-align: left;}
 	.product-loop .proloop-actions__inner .actions-secondary .button .btnico + span{display:none}
 	.listProduct-row {margin: 0;}
