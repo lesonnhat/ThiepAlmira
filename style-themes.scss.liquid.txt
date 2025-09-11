@@ -470,13 +470,13 @@ img.lazyload:not([src]) {visibility: hidden;}
 }
 .breadcrumb-list{
 	&{overflow: hidden;}
-	.breadcrumb-arrows {font-size:13px; padding:10px 0;background: transparent;border-radius: 0;margin: 0;list-style: none;}
+	.breadcrumb-arrows {font-size:13px; padding:15px 0;background: transparent;border-radius: 0;margin: 0;list-style: none;}
 	.breadcrumb-arrows>li{ display: inline-block;}
 	.breadcrumb-arrows>li strong{font-weight:400}
 	.breadcrumb-arrows>li a{color:var(--shop-color-text);}
 	.breadcrumb-arrows>li+li:before {	padding: 0 3px;margin-left:5px;color:#ccc;font-family: 'FontAwesome';content: "/\00a0";}
 	@media(max-width:767px){
-		.breadcrumb-arrows { padding:7px 0;font-size:12px;display: block;white-space: nowrap;overflow: scroll;}
+		.breadcrumb-arrows { padding:15px 0;font-size:12px;display: block;white-space: nowrap;overflow: scroll;}
 		.breadcrumb-arrows>li+li:before {	padding: 0 2px;}
 		.breadcrumb-arrows::-webkit-scrollbar {display: none;}
 		.breadcrumb-arrows{-ms-overflow-style: none;scrollbar-width: none;}
@@ -1622,7 +1622,7 @@ $lineColor: {{settings.topbar_text_color}};
 	.header-search-mobile{
 		display:none;
 		position: relative;
-		padding:5px 6px ; 
+		padding:6px 6px 10px 6px; 
 		/*border-bottom: 1px solid #e7e7e7;*/
 		.searchform-mobile{
 			position: relative;
