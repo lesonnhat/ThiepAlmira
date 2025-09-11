@@ -476,7 +476,7 @@ img.lazyload:not([src]) {visibility: hidden;}
 	.breadcrumb-arrows>li a{color:var(--shop-color-text);}
 	.breadcrumb-arrows>li+li:before {	padding: 0 3px;margin-left:5px;color:#ccc;font-family: 'FontAwesome';content: "/\00a0";}
 	@media(max-width:767px){
-		.breadcrumb-arrows { padding:15px 0;font-size:12px;display: block;white-space: nowrap;overflow: scroll;}
+		.breadcrumb-arrows { padding:15px 0;font-size:13px;display: block;white-space: nowrap;overflow: scroll;}
 		.breadcrumb-arrows>li+li:before {	padding: 0 2px;}
 		.breadcrumb-arrows::-webkit-scrollbar {display: none;}
 		.breadcrumb-arrows{-ms-overflow-style: none;scrollbar-width: none;}
