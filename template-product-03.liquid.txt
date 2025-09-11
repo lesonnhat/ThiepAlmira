@@ -190,26 +190,6 @@
 							{%- endunless -%}
 							{%- endif -%}
 						</div>
-						
-						<div class="product-hrvpmo hrvpmo-minimum">
-							<div class="hrv-pmo-coupon" data-hrvpmo-layout="minimum"></div>
-							<div class="hrv-pmo-discount" data-hrvpmo-layout="minimum"></div>
-						</div>
-					{% if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appbuyxgety' %}
-						<div class="product-buyxgety selector-buyxgety" id="detail-product">							
-							<div id="buyxgety-program" class="d-none">
-								<div class="buyxgety-heading">
-									<h3>Các sản phẩm được tặng kèm</h3>						
-									<p>Chọn 1 trong các loại quà tặng</p>
-								</div>							
-								<div id="buyxgety-product-list" data-id="{{product.id}}" data-title="{{product.title}}">
-									<div class="buyxgety_content clearfix">									
-										<div class="buyxgety_lists"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						{% endif %}
 
 						<div class="product-actions">
 							{%-if checkgift-%}
