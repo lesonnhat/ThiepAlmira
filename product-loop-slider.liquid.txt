@@ -83,68 +83,24 @@
 			
 			{%- assign fimg = product.featured_image.src -%}
       <div class="product--image">
-        {% if product.images.size > 1 %}
-          {%- assign fimg = product.featured_image.src -%}
-          <div class="lazy-img first-image" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
-            <img
-              class="img-loop"
-              src="{{ fimg | product_img_url: 'medium' }}"   {# ~480px #}
-              srcset="
-                {{ fimg | product_img_url: 'small' }} 240w,
-                {{ fimg | product_img_url: 'medium' }} 480w,
-                {{ fimg | product_img_url: 'large' }} 600w,
-                {{ fimg | product_img_url: '1024x1024' }} 1024w"
-              sizes="(max-width: 480px) 224px, (max-width: 1199px) 300px, 480px"
-              alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
-              loading="lazy" decoding="async"
-              width="1024" height="1024">
-          </div>
-      
-          {%- assign simg = product.images[1].src -%}
-          <div class="lazy-img second-image hovered-img d-none d-lg-block" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
-            <img
-              class="img-loop"
-              src="{{ simg | product_img_url: 'medium' }}"
-              srcset="
-                {{ simg | product_img_url: 'small' }} 240w,
-                {{ simg | product_img_url: 'medium' }} 480w,
-                {{ simg | product_img_url: 'large' }} 600w,
-                {{ simg | product_img_url: '1024x1024' }} 1024w"
-              sizes="(max-width: 1199px) 300px, 480px"
-              alt="{{ product.images[1].alt | default: product.title | strip_html | escape }}"
-              loading="lazy" decoding="async"
-              width="1024" height="1024">
-          </div>
-        {% else %}
-          {%- assign fimg = product.featured_image.src -%}
-          <div class="lazy-img" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
-            <img
-              class="img-loop"
-              src="{{ fimg | product_img_url: 'medium' }}"
-              srcset="
-                {{ fimg | product_img_url: 'small' }} 240w,
-                {{ fimg | product_img_url: 'medium' }} 480w,
-                {{ fimg | product_img_url: 'large' }} 600w,
-                {{ fimg | product_img_url: '1024x1024' }} 1024w"
-              sizes="(max-width: 480px) 224px, (max-width: 1199px) 300px, 480px"
-              alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
-              loading="lazy" decoding="async"
-              width="1024" height="1024">
-          </div>
-        {% endif %}
+        {% assign fimg = product.featured_image.src %}
+        <div class="lazy-img" {% if resizeImg != '' %}style="padding-bottom: {{ resizeImg }}"{% endif %}>
+          <img class="img-loop"
+               src="{{ fimg | product_img_url: 'medium' }}"
+               srcset="{{ fimg | product_img_url: 'small' }} 240w, {{ fimg | product_img_url: 'medium' }} 480w, {{ fimg | product_img_url: 'large' }} 600w, {{ fimg | product_img_url: '1024x1024' }} 1024w"
+               sizes="(max-width: 480px) 224px, (max-width: 1199px) 300px, 480px"
+               alt="{{ product.featured_image.alt | default: product.title | strip_html | escape }}"
+               loading="lazy" decoding="async" width="1024" height="1024">
+        </div>
       </div>
-
-			<div class="quickview-product">
-				<a class="icon-quickview {% if is_preorder_prodloop %}is-preorder{%endif%}" href="javascript:void(0)" name="icon quickview" data-handle="{{product.url}}" title="Xem nhanh"><i class="fa fa-eye" aria-hidden="true"></i></a>
-			</div>
-			<a href="{{product.url}}" class="proloop-link quickview-product" data-handle="{{product.url}}" title="{{product.title}}" ></a>
+			<a href="{{ product.url }}" class="proloop-link" title="{{ product.title }}"></a>
 		</div>
 		<div class="proloop-detail">
 			{%- if settings.prod_variant_show -%}{%- include 'product-loop--options' -%}	{%- endif -%}
 			{%- if settings.prod_vendor_show -%}
 			{%- unless product.vendor == 'Khác' -%}<p class="proloop--vendor">{{product.vendor | link_to_vendor}}</p>{%- endunless -%}
 			{%- endif -%}
-			<h3><a href="{{product.url}}" class="quickview-product" data-handle="{{product.url}}">{{ product.title }}</a></h3>
+			<h3><a href="{{product.url}}">{{ product.title }}</a></h3>
 			{%- if settings.productreviews_hrvapp_use and settings.productreviews_hrvapp_proloop -%}
 			<div class="proloop--review">
 				<!--  check review -->
