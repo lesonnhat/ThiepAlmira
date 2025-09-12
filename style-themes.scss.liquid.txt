@@ -2739,7 +2739,6 @@ $borderFt: {{settings.footer-color-title}};
 		.product--image {
 			position: relative;
 			display: flex;display: -ms-flex;display: -webkit-flex;
-			.lazy-img.second-image {transform: translate(5px);-ms-transform: translate(5px);-webkit-transform: translate(5px);}
 
 		}
 		.proloop-link {
@@ -2800,24 +2799,22 @@ $borderFt: {{settings.footer-color-title}};
 			&:hover{background-color: #444;color:#fff;border:1px solid #fff;}
 		}
 		.lazy-img {
-			position: relative;
-			width: 100%;height: 0;
-			flex: 0 0 100%;-ms-flex: 0 0 100%;
-			padding-bottom: {{productAspect}};
-			-webkit-transition: all 500ms ease;
-			-moz-transition: all 500ms ease;  -ms-transition: all 500ms ease;
-			-o-transition: all 500ms ease;   transition: all 500ms ease;
-			img {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				display: block;
-				object-fit: contain;
-				transform: translate(-50%, -50%);
-				-ms-transition: all 500ms ease;  -o-transition: all 500ms ease;  transition: all 500ms ease;
-				max-height: 100%;
-			}
-		}
+      position: relative;
+      width: 100%; height: 0;
+      flex: 0 0 100%;
+      padding-bottom: {{ productAspect }};
+      transition: none; /* hoặc: transition: opacity 150ms; */
+    
+      img {
+        position: absolute;
+        top: 50%; left: 50%;
+        display: block;
+        object-fit: contain;
+        transform: translate(-50%, -50%);
+        transition: none; /* bỏ animate thừa */
+        max-height: 100%;
+      }
+    }
 	}
 	.proloop-detail{
 		position:relative;padding: 10px 10px 12px;
@@ -3027,29 +3024,22 @@ $borderFt: {{settings.footer-color-title}};
 	@media(min-width:992px){
 		&.prod-action-small .proloop-detail .proloop-actions__inner .actions-primary .btn-proloop-cart {padding: 0 40px 0 10px;font-size: 11px;}
 		.product-inner{
-			&{
-				position: relative; overflow: hidden;
-				-webkit-transition: all 400ms ease; -moz-transition: all 400ms ease;
-				-ms-transition: all 400ms ease;  -o-transition: all 400ms ease;  transition: all 400ms ease;
-			}
-			.proloop-detail{
-				background: #fff;
-				-webkit-transition: transform 300ms ease; -moz-transition: transform 300ms ease;
-				-ms-transition: transform 300ms ease;  -o-transition: transform 300ms ease;  transition: transform 300ms ease;
-				.proloop-actions__inner .actions-primary .btn-proloop-cart:not(.disabled):hover {border-color: {{settings.addtocart_bgk}};}
-			}		
-			&:hover{
-				-webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-				box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-				.proloop-image{
-					.product--image {
-						.lazy-img.first-image {-webkit-opacity: 0; -moz-opacity: 0;opacity: 0;transform: translate(calc(-100% - 5px));-ms-transform: translate(calc(-100% - 5px));-webkit-transform: translate(calc(-100% - 5px));}
-						.lazy-img.second-image {-webkit-opacity: 1; -moz-opacity: 1;opacity: 1;transform: translate(-100%);-ms-transform: translate(-100%);-webkit-transform: translate(-100%);}
-					}
-					.icon-quickview {opacity: 1;}
-				}
-			}
-		}
+      position: relative; overflow: hidden;
+      transition: all 400ms ease;
+    
+      .proloop-detail{
+        background: #fff;
+        transition: transform 300ms ease;
+        .proloop-actions__inner .actions-primary .btn-proloop-cart:not(.disabled):hover {
+          border-color: {{ settings.addtocart_bgk }};
+        }
+      }
+    
+      &:hover{
+        -webkit-box-shadow: 0 2px 12px rgba(0,0,0,.12);
+        box-shadow: 0 2px 12px rgba(0,0,0,.12);
+      }
+    }
 		.proloop-detail{    
 			.proloop--price.prices-ctas .price-del{display: block;}
 		}

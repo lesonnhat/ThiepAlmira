@@ -119,30 +119,10 @@
             decoding="async"
             width="1024" height="1024">
         </div>
-      
-        {% if product.images.size > 1 %}
-          {% assign simg = product.images[1].src %}
-          <!-- Ảnh hover (chỉ desktop) -->
-          <div class="lazy-img second-image hovered-img d-none d-lg-block">
-            <img
-              class="img-loop"
-              src="{{ simg | product_img_url: '600x600' }}"
-              srcset="{{ simg | product_img_url: '600x600' }} 600w,
-                      {{ simg | product_img_url: '1024x1024' }} 1024w"
-              sizes="1024px"
-              alt="{{ product.images[1].alt | default: product.title | strip_html | escape }}"
-              loading="lazy"
-              decoding="async"
-              width="1024" height="1024">
-          </div>
-        {% endif %}
       </div>
-
-			<div class="quickview-product">
-				<a class="icon-quickview {% if is_preorder_prodloop %}is-preorder{%endif%}" href="javascript:void(0)" name="icon quickview" data-handle="{{product.url}}" title="Xem nhanh"><i class="fa fa-eye" aria-hidden="true"></i></a>
-			</div>
-			<a href="{{product.url}}" class="proloop-link quickview-product" data-handle="{{product.url}}" title="{{product.title}}" ></a>
-		</div>
+			<a href="{{product.url}}" class="proloop-link" title="{{product.title}}" ></a>
+    </div>
+    
 		<div class="proloop-detail">
 			{%- if settings.prod_variant_show -%}{%- include 'product-loop--options' -%}	{%- endif -%}
 
