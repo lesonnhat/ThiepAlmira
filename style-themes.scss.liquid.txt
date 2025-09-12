@@ -134,7 +134,7 @@ ul, ol{	padding:0;margin:0;list-style-type:none;}
 	position: relative;	display: inline-block;z-index: 1;overflow: hidden;
 	padding: 8px 24px;	line-height: normal;color: #fff;border-radius: 20px;
 	background-color: var(--shop-color-hover);border: 0;
-	font-size: 13px;font-weight:300; text-align: center;  
+	font-size: 13px;font-weight:400; text-align: center;  
 	letter-spacing: 1px;text-transform: uppercase;outline: none !important;
 	-webkit-transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -1009,7 +1009,7 @@ $lineColor: {{settings.topbar_text_color}};
 			}
 			.filter-select .select-item select:-ms-expand {display: none; }
 			.filter-select .select-item select:invalid {color: #677279; }
-			.filter-select .select-item select [disabled] {	color: #ededed;font-weight: 300;}
+			.filter-select .select-item select [disabled] {	color: #ededed;font-weight: 400;}
 			.filter-select .select-item select option {color: #000;font-weight: 500; line-height: 18px; }
 			.filter-select .select-item select option[value="null"] { color: #677279;}
 		}
@@ -1022,7 +1022,7 @@ $lineColor: {{settings.topbar_text_color}};
 	form.searchform input.input-search {
 		height: 44px;line-height:28px;padding: 8px 50px 8px 20px;
 		width: 100%;background:#f6f6f6;border:1px solid #ebebeb;
-		font-size:15px;	font-weight: 300;margin: 0;
+		font-size:15px;	font-weight: 400;margin: 0;
 		display: inline-block;border-radius: 0;
 		-webkit-appearance: none;-moz-appearance: none;	-o-appearance: none;appearance: none; 
 	}
@@ -2858,7 +2858,7 @@ $borderFt: {{settings.footer-color-title}};
 		}
 		.proloop--price {
 			margin: 0;font-weight: 600;font-size: 16px;color: #333;
-			.price-del{color:#878c8f;text-decoration: line-through;font-weight: 300;font-size: 13px;}
+			.price-del{color:#878c8f;text-decoration: line-through;font-weight: 400;font-size: 13px;}
 			.price {margin-right:6px;}
 			&.on-sale .price {color:#ff2c26;}
 		}
@@ -7607,7 +7607,7 @@ PAGE FAQS
 								&:-ms-expand {display: none;}							
 							}
 							select:invalid {color: #ededed; }
-							select [disabled] {color: #ededed;font-weight: 300; }
+							select [disabled] {color: #ededed;font-weight: 400; }
 							select option {color: #000;font-weight: 500; }
 						}
 					}
@@ -8318,7 +8318,7 @@ PAGE FAQS
 	width: 35px;height: 35px; line-height: 35px;border-radius: 50%;
 	float: left;border: 1px solid #ddd;text-align: center;font-size: 15px; 
 }
-.box-info-contact li p {width: calc(100% - 35px);float: left;padding-left: 15px;margin-bottom:5px;color:#343434;font-weight: 300;}
+.box-info-contact li p {width: calc(100% - 35px);float: left;padding-left: 15px;margin-bottom:5px;color:#343434;font-weight: 400;}
 .box-info-contact li p a{color:#343434;}
 .box-info-contact li p strong{color:#000;margin-bottom:5px;}
 .wrapbox-contact {
@@ -8332,7 +8332,7 @@ PAGE FAQS
 .contact-form .input-group {width: 100%;margin-bottom: 20px;}
 .contact-form .input-group input,
 .contact-form .input-group textarea {
-	color:#222222;height: 45px;width:100%;font-weight: 300;padding:8px 20px;background: #fcfcfc;
+	color:#222222;height: 45px;width:100%;font-weight:400; padding:8px 20px; background:#fcfcfc;
 	border: 1px solid var(--shop-color-border);border-radius:4px;box-shadow: none;
 	-moz-appearance: none;-webkit-appearance: none;appearance: none;
 }
@@ -9646,10 +9646,6 @@ SIDEBAR ACTION PRODUCT
 body, input, button, textarea,
 h1, h2, h3, .heading, .section-title {
   font-family: 'Montserrat', Arial, sans-serif;
-}
-
-body {
-  font-weight: 400 !important;
 }
 
 /* Show full collection description (fix bị che phần dưới) */
