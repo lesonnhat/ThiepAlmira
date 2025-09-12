@@ -20,8 +20,9 @@
 																	<div class="product-thumb__item boxlazy-img">		
 																		<div class="boxlazy-img__insert lazy-img__prod">
 																			<span class="boxlazy-img__aspect">
-																				<img alt="{%if media.alt != ''%}{{ media.alt | escape }}{%else%}{{product.title}}{%endif%}"
-																						 src="{{ media.preview_image.src | product_img_url : 'compact' }}" data-image="{{ media.preview_image.src | product_img_url : 'master' }}"/>
+																				<img alt="{% if media.alt != '' %}{{ media.alt | escape }}{% else %}{{product.title}}{% endif %}"
+                                         src="{{ media.preview_image.src | product_img_url: 'compact' }}"
+                                         data-image="{{ media.preview_image.src | product_img_url: 'master' }}"/>
 																					</span>
 																			<span class="boxlazy-img__aspect icon-play">
 																				<img class="lazyload" data-src="https://file.hstatic.net/200000592359/file/icon_video_2d253ef605b0407da214e359ac3bdea5.png" 
@@ -63,7 +64,10 @@
 													<div class="product-thumb__item boxlazy-img">	
 														<div class="boxlazy-img__insert lazy-img__prod">
 															<span class="boxlazy-img__aspect">
-																<img src="{{ thumb.src | product_img_url : 'compact' }}" alt="{% if product.images.alt.size >0 %}{{ product.images.alt  | strip_html | escape }} {% else%} {{product.title | strip_html | escape }} {% endif %}">
+																<img src="{{ thumb.src | product_img_url : 'compact' }}"
+                                 width="{{ thumb.width | default: product.featured_image.width }}"
+                                 height="{{ thumb.height | default: product.featured_image.height }}"
+                                 alt="{% if product.images.alt.size > 0 %}{{ product.images.alt | strip_html | escape }}{% else %}{{ product.title | strip_html | escape }}{% endif %}">
 															</span>
 														</div>
 													</div>					
@@ -73,9 +77,13 @@
 													<div class="product-gallery__item boxlazy-img">  
 														<div class="boxlazy-img__insert lazy-img__prod">
 															<span class="boxlazy-img__aspect">
-																<a class="product-gallery__item" data-fancybox="gallery" href="{{ thumb.src | product_img_url : 'master' }}">	
-																	<img src="{{ thumb.src | product_img_url : 'master' }}" alt="{% if product.images.alt.size >0 %}{{ product.images.alt  | strip_html | escape }} {% else%} {{product.title | strip_html | escape }} {% endif %}">
-																</a>		
+																<a class="product-gallery__item" data-fancybox="gallery" href="{{ thumb.src | product_img_url : 'master' }}">
+                                  <img src="{{ thumb.src | product_img_url : 'master' }}"
+                                       width="{{ thumb.width | default: product.featured_image.width }}"
+                                       height="{{ thumb.height | default: product.featured_image.height }}"
+                                       decoding="async"
+                                       alt="{% if product.images.alt.size > 0 %}{{ product.images.alt | strip_html | escape }}{% else %}{{ product.title | strip_html | escape }}{% endif %}">
+                                </a>
 															</span>
 														</div>
 													</div>
@@ -103,22 +111,16 @@
 
 												{{thumb_img}}
 											</div>	
-											<div class="product-percent">
-												{%- if product.variants.first.compare_at_price > product.price -%}
-												<span class="pro-sale">-{{product.variants.first.compare_at_price | minus: product.variants.first.price | divided_by:product.variants.first.compare_at_price | times : 100 | round : 0}}%<br> OFF </span>
-												{%- endif -%}	
-											</div>
 										</div>					
 									{% else %}
 										<div class="wrapbox-image no_gallery">
 											<div class="product-gallery">
-												<img src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}" alt="{% if product.images.alt.size >0 %}{{ product.images.alt  | strip_html | escape }} {% else%} {{product.title | strip_html | escape }} {% endif %}"/>
+												<img src="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'master' }}{% else %}{{ 'no_image.jpg' | asset_url }}{% endif %}"
+                         width="{{ product.featured_image.width | default: 1024 }}"
+                         height="{{ product.featured_image.height | default: 1024 }}"
+                         decoding="async"
+                         alt="{% if product.images.alt.size > 0 %}{{ product.images.alt | strip_html | escape }}{% else %}{{ product.title | strip_html | escape }}{% endif %}">
 											</div>			
-										</div>
-										<div class="product-percent">
-											{%- if product.variants.first.compare_at_price > product.price -%}
-											<span class="pro-sale">-{{product.variants.first.compare_at_price | minus: product.variants.first.price | divided_by:product.variants.first.compare_at_price | times : 100 | round : 0}}%<br> OFF </span>
-											{%- endif -%}
 										</div>
 									{%endif%}
 								</div>
