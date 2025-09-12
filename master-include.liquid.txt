@@ -18,12 +18,6 @@
 	{%- endif -%}
 {%- endif -%} 
 
-{%- unless settings.base_font contains 'Arial' -%}
-{%- if settings.base_font -%}
-<link rel="preconnect" href="{{ '//fonts.googleapis.com/css?family=' | append: settings.base_font | append: '&display=swap'}}" crossorigin>
-<link rel="preload stylesheet" href="{{ '//fonts.googleapis.com/css?family=' | append: settings.base_font | append: '&display=swap' }}" as="style"> 
-{%- endif -%}
-{%- endunless -%}
 <!--+++++++++++++ CSS THEME ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 {%- include 'plugins-css' -%}
 <link rel="preload stylesheet" href="{{ 'style-themes.scss.css' | asset_url }}" as="style">

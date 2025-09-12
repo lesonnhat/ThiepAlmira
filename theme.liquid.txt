@@ -103,6 +103,16 @@
 																})(window,document,'script','dataLayer','GTM-NP8HFM8');</script>
 		<!-- End Google Tag Manager -->	
 		{% endcomment %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+
+    <style>
+      html{font-family:'Montserrat',system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+      body,input,button,textarea,h1,h2,h3,.heading,.section-title{font:inherit}
+    </style>
+    
 	</head>
 	<body class="mainBody-theme {% if  cart.item_count > 0 %} mainBody-mbcart {% endif %} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" itemscope itemtype="http://schema.org/Website">
 		{% comment %}<!-- Google Tag Manager (noscript) -->
