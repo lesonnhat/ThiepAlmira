@@ -9664,3 +9664,29 @@ body {
   transform: translate(2px, -1px); /* +X sang phải 1px, -Y lên trên 1px */
   display: inline-block;
 }
+
+/* Ẩn cho đến khi slick gắn class .slick-initialized */
+.productSlick-slider,
+.productSlick-thumb { visibility: hidden; }
+
+.productSlick-slider.slick-initialized,
+.productSlick-thumb.slick-initialized { visibility: visible; }
+
+/* Không mờ/blur khi load để khỏi khựng */
+.lazyloading,
+.lazyloaded {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: none !important;
+}
+
+/* Slider ảnh chi tiết: bỏ mọi transition không cần thiết */
+.productGallery_slider .boxlazy-img__insert,
+.productGallery_slider .boxlazy-img__aspect,
+.productGallery_slider .boxlazy-img__aspect img {
+  transition: none !important;
+}
+
+/* Tỷ lệ khung ảnh theo {{productAspect}} */
+.lazy-img__prod { padding-bottom: {{ productAspect }}; }
