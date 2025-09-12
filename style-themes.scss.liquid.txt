@@ -1372,7 +1372,7 @@ $lineColor: {{settings.topbar_text_color}};
 					position: relative;z-index: 2;
 					display: block;padding:15px 0px;
 					width: 100%;letter-spacing:0.75px;
-					font-weight: 300;font-size: 14px;
+					font-weight: 400;font-size: 14px;
 					-webkit-transition:none;transition:none;
 					svg {
 						display: inline-block;vertical-align: middle;margin-left: 0;
@@ -1442,7 +1442,7 @@ $lineColor: {{settings.topbar_text_color}};
         padding: 8px 22px;
         text-align: left;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         color: var(--shop-color-text);
         opacity: .85;
         border-radius: 0px; /* không bo viền */
@@ -9649,7 +9649,7 @@ h1, h2, h3, .heading, .section-title {
 }
 
 body {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
 /* Show full collection description (fix bị che phần dưới) */
