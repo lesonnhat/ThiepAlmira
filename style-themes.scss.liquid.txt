@@ -9747,3 +9747,41 @@ h1, h2, h3, .heading, .section-title {
 
 /* mượt khi đổi */
 .navbar-mainmenu a { transition: color .2s ease, font-weight .2s ease; }
+
+/* điều chỉnh trang sản phẩm 1,2,3... trong Nhóm sản phẩm */
+/* Pagination – vòng tròn */
+.collection-pagination{margin-top:28px;text-align:center}
+.collection-pagination .pagination-list{
+  display:inline-flex;gap:12px;align-items:center;list-style:none;padding:0;margin:0
+}
+
+/* Ô tròn mặc định */
+.collection-pagination .pagination-list > li > a,
+.collection-pagination .pagination-list > li > span{
+  width:40px;height:40px;border-radius:50%;
+  display:inline-grid;place-items:center;
+  background:#f5f3ee;color:#6b6f73;text-decoration:none;
+  font-size:16px;line-height:1;font-weight:500;
+  transition:transform .15s ease, color .15s ease, background-color .15s ease;
+}
+
+/* Hover */
+.collection-pagination .pagination-list > li > a:hover{
+  background:#ebe8e1;color:#0b6870;transform:translateY(-1px);
+}
+
+/* Đang ở trang hiện tại */
+.collection-pagination .pagination-list .is-current{
+  background:#0b6870;color:#fff;font-weight:700;
+}
+
+/* Dấu … không cần ô tròn */
+.collection-pagination .pagination-list .ellipsis{
+  background:transparent;width:auto;height:auto;padding:0;color:#b1b1b1;
+}
+
+/* Mobile: ô nhỏ hơn một chút */
+@media (max-width: 575px){
+  .collection-pagination .pagination-list>li>a,
+  .collection-pagination .pagination-list>li>span{width:34px;height:34px;font-size:14px}
+}

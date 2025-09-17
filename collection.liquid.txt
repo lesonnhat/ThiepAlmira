@@ -174,11 +174,30 @@
 								{%- endif -%}				
 							</div>
 							{%- if collection.products.size > 0 -%}	
-							<div class="collection-loadmore text-center">
-								{%- if paginate.pages > 1 and paginate.pages > paginate.current_page  -%}	
-								<a class="button btn-loadmore" data-page="{{paginate.current_page | plus: 1 }}" data-collectionid="{{ collection.id }}" data-collectionhd="{{ collection.url }}" href="javascript:void(0);">Xem thêm sản phẩm</a>
-								{%- endif -%}	
-							</div>
+							{%- if paginate.pages > 1 -%}
+              <nav class="collection-pagination" role="navigation" aria-label="Pagination">
+                <ul class="pagination-list">
+                  {%- if paginate.previous.is_link -%}
+                    <li><a class="prev" href="{{ paginate.previous.url }}" aria-label="Trang trước">←</a></li>
+                  {%- endif -%}
+              
+                  {%- for part in paginate.parts -%}
+                    {%- if part.is_link -%}
+                      <li><a href="{{ part.url }}">{{ part.title }}</a></li>
+                    {%- elsif part.title == paginate.current_page -%}
+                      <li><span class="is-current">{{ part.title }}</span></li>
+                    {%- else -%}
+                      <li><span class="ellipsis">…</span></li>
+                    {%- endif -%}
+                  {%- endfor -%}
+              
+                  {%- if paginate.next.is_link -%}
+                    <li><a class="next" href="{{ paginate.next.url }}" aria-label="Trang sau">→</a></li>
+                  {%- endif -%}
+                </ul>
+              </nav>
+              {%- endif -%}
+
 							{%- endif -%}	
 						</div>
 					</div>
@@ -408,46 +427,38 @@
           callbackFitler();
 				}
 			})
-			if(cur_page <= total_page){
-				jQuery.ajax({
-					url : "/search?q="+str_url+"&view=filter"+sortBy,
-					success: function(data){
-						setTimeout(function(){ 
-							$(".product-noloop").remove();
-							$(".listProduct-filter").html('');	
-							$(".listProduct-filter").html(data);	
+			if (cur_page <= total_page) {
+        $.ajax({
+          url: "/search?q=" + str_url + "&view=filter" + sortBy,
+          success: function (data) {
+            setTimeout(function () {
+              $(".product-noloop").remove();
+              $(".listProduct-filter").html(data);
               callbackFitler();
-							$('.title-count b').html(total_product);
-							if(productReviewsApp &&  productReviewsProloop){ ProductReviews.init(); }
-							if(promotionApp){	
-								if (promotionApp_name == 'app_combo'){
-									comboApp.showGiftLabel();				
-								}
-								else{	
-									buyXgetY.showGiftLabel();	
-								}
-							}	
-							if($(window).width() > 1200){
-								$('[data-toggle="popover"]').popover({
-									container: 'body'
-								})
-							}
-							if(total_page > 1){
-								$('.wraplist-collection .collection-loadmore').addClass('loadmore-filter').show();
-								$('.wraplist-collection .collection-loadmore a').attr('data-page',cur_page+1);
-							}
-							else{
-								$('.wraplist-collection .listProduct-filter').siblings(':not(h3)').hide();
-							}	
-						},300);
-					}
-				});
-			} else {
-				jQuery(".listProduct-filter").html('');	
-				jQuery(".listProduct-filter").append('<div class="col-md-12 product-noloop"><div class="collection-alert-no"><p>Không tìm thấy kết quả. Vui lòng thử lại!</p></div></div>');
-				jQuery('.wraplist-collection .collection-loadmore').hide();
-				jQuery(".title-count b").html("0");
-			}
+              $('.title-count b').text(total_product);
+      
+              if (productReviewsApp && productReviewsProloop) { ProductReviews.init(); }
+              if (promotionApp) {
+                if (promotionApp_name == 'app_combo') { comboApp.showGiftLabel(); }
+                else { buyXgetY.showGiftLabel(); }
+              }
+              if ($(window).width() > 1200) {
+                $('[data-toggle="popover"]').popover({ container: 'body' });
+              }
+      
+              // đang xem kết quả filter (AJAX) -> ẩn phân trang mặc định
+              $('.collection-pagination').hide();
+            }, 300);
+          }
+        });
+      } else {
+        $(".listProduct-filter").html(
+          '<div class="col-md-12 product-noloop"><div class="collection-alert-no"><p>Không tìm thấy kết quả. Vui lòng thử lại!</p></div></div>'
+        );
+        $('.title-count b').text('0');
+        // Ẩn phân trang luôn khi không có kết quả
+        $('.collection-pagination').hide();
+      }
 			var x = $('#collection-body').offset().top;
 			HRT.All.smoothScroll(x, 500); 
 		}
@@ -488,160 +499,32 @@
 			});
 
 			$.ajax({
-				url: urlQuery+'&page='+cur_page+sortByPicked,
-				type: 'GET',
-				async: false,
-				success:function(data){
-					$('.wraplist-collection .listProduct-filter').html('');
-          
-					if(cur_page >= total_page && total_page > 1){ 
-						$('.wraplist-collection .listProduct-filter').siblings(':not(h3)').hide();
-					}
-					else{
-						setTimeout(function(){ 
-							$('.wraplist-collection .listProduct-filter').append(data).addClass('loaded');
-							$('.title-count b').html(total_product);
-							$('.collection-loadmore .btn-loadmore').attr('data-page',cur_page+1);
-							$('.collection-loadmore').find('.btn-loadmore').removeClass('btn-loading')
-							$('.collection-loadmore').show();
-              callbackFitler();
-							if(productReviewsApp &&  productReviewsProloop){ ProductReviews.init(); }
-							if(promotionApp){	
-								if (promotionApp_name == 'app_combo'){
-									comboApp.showGiftLabel();				
-								}
-								else{	
-									buyXgetY.showGiftLabel();	
-								}
-							}	
-							if($(window).width() > 1200){
-								$('[data-toggle="popover"]').popover({
-									container: 'body'
-								})
-							}
-						}, 400);
-					}
-				}
-			});
+        url: urlQuery + '&page=' + cur_page + sortByPicked,
+        type: 'GET',
+        success: function (data) {
+          $('.wraplist-collection .listProduct-filter').html('');
+          setTimeout(function () {
+            $('.wraplist-collection .listProduct-filter').append(data).addClass('loaded');
+            $('.title-count b').text(total_product);
+            callbackFitler();
+            if (productReviewsApp && productReviewsProloop) { ProductReviews.init(); }
+            if (promotionApp) {
+              if (promotionApp_name == 'app_combo') { comboApp.showGiftLabel(); }
+              else { buyXgetY.showGiftLabel(); }
+            }
+            if ($(window).width() > 1200) {
+              $('[data-toggle="popover"]').popover({ container: 'body' });
+            }
+      
+            // Trở về danh sách gốc -> hiện lại phân trang
+            $('.collection-pagination').show();
+          }, 400);
+        }
+      });
 
 			var x = $('#collection-body').offset().top;
 			HRT.All.smoothScroll(x, 500);
 		}
-		$(document).on("click","#collection-body .collection-loadmore .btn-loadmore:not(.btn-loading)", function(e){
-			e.preventDefault();
-			$(this).addClass('btn-loading');
-			var btn = $(this);
-			var view = "?view=data", pageView = '?view=pagesize';			
-			var link = parseInt($(this).attr("data-page"));		
-			var collectionHd = "{{collection.url}}";				
-			var urlQuery = collectionHd+view;
-			var pathName = window.location.pathname;
-
-			if(pathName.indexOf('vendors') > -1 || pathName.indexOf('types') > -1){
-				collectionHd = pathName + '?q='+paramUrl.q;
-				urlQuery = pathName + '?q='+paramUrl.q+view.replace('?','&');
-			}
-
-			if ($('.sort-by').length > 0) {			
-				if($('.sort-by li.active').length > 0){	
-					if ($('.sort-by li.active').find('span').data('value') == 'manual') {
-						sortBy = '';
-					} 
-					else {
-						if((hasChangeSort) || $('.checkbox-list li.active').length > 0){
-							sortBy = '&sortby=' + $('.sort-by li.active').find('span').data('filter');
-						}
-						else{
-							sortBy = '&sort_by=' + $('.sort-by li.active').find('span').data('value');
-						}
-					}
-				}
-				else{
-					sortBy = '';				
-				}
-				sortByPicked = sortBy;
-			}
-
-			if((activeFilter && $('.checkbox-list li.active').length == 0 && hasChangeSort == false) || (!activeFilter && activeSort && hasChangeSort == false)){
-				$.ajax({
-					url: collectionHd + (collectionHd.indexOf('?') > -1?pageView.replace('?','&'):pageView),	
-					type: 'GET',
-					async: false,
-					success:function(data){		
-						data = JSON.parse(data);
-						total_page = parseInt(data.pages);
-					}
-				});		
-
-				$.ajax({
-					url: urlQuery+'&page='+link+sortByPicked,					
-					type: 'GET',
-					async: false,
-					success:function(data){
-						setTimeout(function(){ 
-              
-							$('.wraplist-collection .listProduct-filter').append(data).addClass('loaded');
-							$('.collection-loadmore').find('.btn-loadmore').removeClass('btn-loading');
-							if(productReviewsApp &&  productReviewsProloop){	ProductReviews.init();	}
-							if(promotionApp){	
-								if (promotionApp_name == 'app_combo'){
-									comboApp.showGiftLabel();				
-								}
-								else{	
-									buyXgetY.showGiftLabel();	
-								}
-							}	
-							if($(window).width() > 1200){
-								$('[data-toggle="popover"]').popover({
-									container: 'body'
-								})
-							}
-
-							if(link == 1){
-								$('.wraplist-collection .listProduct-filter').html('');
-							}
-							if(link >= total_page){ 
-								$('.wraplist-collection .listProduct-filter').siblings(':not(h3)').hide();
-							}
-						}, 350);
-					}
-				});
-				$(this).attr('data-page',link+1);
-			}
-			else{
-				jQuery.ajax({
-					url : "/search?q="+str+"&view=filter"+sortByPicked+'&page='+link,
-					success: function(data){
-						jQuery(".product-noloop").remove();					
-						setTimeout(function(){ 
-							$('.wraplist-collection .listProduct-filter').append(data).addClass('loaded');
-              callbackFitler();
-							$('.collection-loadmore').find('.btn-loadmore').removeClass('btn-loading');
-							if(productReviewsApp &&  productReviewsProloop){ ProductReviews.init(); }
-							if(promotionApp){	
-								if (promotionApp_name == 'app_combo'){
-									comboApp.showGiftLabel();				
-								}
-								else{	
-									buyXgetY.showGiftLabel();	
-								}
-							}	
-							if(link >= total_page && total_page > 1){
-								$('.wraplist-collection .listProduct-filter').siblings(':not(h3)').hide();
-							}
-							else{
-								btn.attr('data-page',link+1);
-							}
-							if($(window).width() > 1200){
-								$('[data-toggle="popover"]').popover({
-									container: 'body'
-								})
-							}
-						}, 350);
-					}
-				});
-			}
-		});
 		$(document).on('click', '.heading-box .title-filter', function(e){
 			e.preventDefault();
 			$(".layered_filter_parent").append('<div class="overlays-rgba"></div>'); 
