@@ -9715,3 +9715,35 @@ h1, h2, h3, .heading, .section-title {
 @media (max-width: 991px) {
   .wrapper-collection-header.banner-header--textonly .collection-hero__inner { padding: 0px 16px; }
 }
+
+/* ===== Nav: hover vừa đổi màu vừa bold ===== */
+:root { --nav-active: #0b6870; }
+
+/* level-1 hover */
+.navbar-mainmenu .menuList-main > li > a:hover,
+.navbar-mainmenu .menuList-main > li > a:focus {
+  color: var(--nav-active);
+  font-weight: 600; /* 700 nếu muốn đậm hơn */
+}
+
+/* level-1 đang active/current */
+.navbar-mainmenu .menuList-main > li.active > a,
+.navbar-mainmenu .menuList-main > li > a[aria-current="page"],
+.navbar-mainmenu .menuList-main > li > a.is-current {
+  color: var(--nav-active);
+  font-weight: 600;
+}
+
+/* dropdown (submenu) hover + active */
+.navbar-mainmenu .menuList-main li .submenu a:hover,
+.navbar-mainmenu .menuList-main li .submenu a:focus,
+.navbar-mainmenu .menuList-main li .dropdown-menu a:hover,
+.navbar-mainmenu .menuList-main li .dropdown-menu a:focus,
+.navbar-mainmenu .menuList-main li .submenu li.active > a,
+.navbar-mainmenu .menuList-main li .dropdown-menu li.active > a {
+  color: var(--nav-active);
+  font-weight: 600;
+}
+
+/* mượt khi đổi */
+.navbar-mainmenu a { transition: color .2s ease, font-weight .2s ease; }
