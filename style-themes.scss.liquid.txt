@@ -9686,3 +9686,32 @@ h1, h2, h3, .heading, .section-title {
 
 /* Tỷ lệ khung ảnh theo {{productAspect}} */
 .lazy-img__prod { padding-bottom: {{ productAspect }}; }
+
+/* Collection header: text-only, full-bleed */
+.wrapper-collection-header.banner-header.banner-header--textonly {
+  background: #0b6870; 
+  width: 100vw;                   /* full màn hình */
+  margin-left: calc(50% - 50vw);  /* phá khung container */
+  margin-right: calc(50% - 50vw);
+}
+
+.wrapper-collection-header.banner-header--textonly h1{
+  color: #fff !important;         /* ép tiêu đề trắng nếu theme có màu khác */
+}
+
+.wrapper-collection-header.banner-header--textonly .collection-hero__inner {
+  max-width: 1200px;              /* bề rộng nội dung */
+  margin: 0 auto;
+  padding: 20px 15px 20px 15px;             /* khoảng cách trên/dưới */
+  text-align: center;
+}
+
+.wrapper-collection-header.banner-header--textonly .collection-desc__info {
+  max-width: 900px;               /* giới hạn độ rộng đoạn mô tả */
+  margin: 8px auto 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .wrapper-collection-header.banner-header--textonly .collection-hero__inner { padding: 0px 16px; }
+}

@@ -17,39 +17,33 @@
 				<div class="overlay-filter"></div>
 			</div>
 			{%- if settings.collection_image_show -%}
-			<div class="wrapper-collection-header banner-header ">
-				<div class="d-flex flex-wrap">
-					<div class="collection-banner col-lg-6 col-12 pl-0 pr-0">
-						{%- if collection.image != blank -%}
-						<img src="{{ collection.image.src }}" alt="{{collection.title}}"/>
-						{%- else -%}
-						<img src="{{ 'collection_banner.jpg' | asset_url }}" alt="{{collection.title}}"/>
-						{%- endif -%}
-					</div>
-					<div class="collection-heading col-lg-6 col-12 ">
-						<h1>{%if collection.handle == 'all'%}Tất cả sản phẩm{%else%}{{collection.title}}{%endif%}</h1>
-						{%- if collection.description != blank -%}
-						<div class="collection-desc">
-							<div class="collection-desc__info">{{ collection.description }}</div>
-						</div>
-						{%- endif -%}
-					</div>
-				</div>
-			</div>
-			{%- else -%}
-			<div class="wrapper-collection-header">
-				<div class="container">	
-					<div class="collection-heading">
-						<h1>{%if collection.handle == 'all'%}Tất cả sản phẩm{%else%}{{collection.title}}{%endif%}</h1>
-						{%- if collection.description != blank -%}
-						<div class="collection-desc">
-							<div class="collection-desc__info">{{ collection.description }}</div>
-						</div>
-						{%- endif -%}
-					</div>
-				</div>
-			</div>
-			{%- endif -%}
+  <div class="wrapper-collection-header banner-header banner-header--textonly">
+    <div class="collection-hero__inner">
+      <div class="collection-heading">
+        <h1>{% if collection.handle == 'all' %}Tất cả sản phẩm{% else %}{{ collection.title }}{% endif %}</h1>
+        {%- if collection.description != blank -%}
+        <div class="collection-desc">
+          <div class="collection-desc__info">{{ collection.description }}</div>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- else -%}
+  <div class="wrapper-collection-header banner-header banner-header--textonly">
+    <div class="collection-hero__inner">
+      <div class="collection-heading">
+        <h1>{% if collection.handle == 'all' %}Tất cả sản phẩm{% else %}{{ collection.title }}{% endif %}</h1>
+        {%- if collection.description != blank -%}
+        <div class="collection-desc">
+          <div class="collection-desc__info">{{ collection.description }}</div>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
 		
 			<div class="wrapper-collection-hrvpmo hrvpmo-grids">	
 				<div class="container">
