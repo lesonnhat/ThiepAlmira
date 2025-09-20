@@ -74,8 +74,7 @@
 		 data-id="{{ product.variants.first.id }}">
 	<div class="product-inner" data-proid="{{ product.id }}" id="{{section}}_loop_{{index_item}}">
 		<div class="proloop-image">
-			{% if on_sale %}<div class="pro-sale"><span>-{{price_sale}}%</span></div>{% endif %}		
-			{% if sold_out %}<div class="pro-soldout"><span>Hết hàng</span></div>{% endif %}	
+			{% if on_sale %}<div class="pro-sale"><span>-{{price_sale}}%</span></div>{% endif %}
 			{% if settings.promotion_hrvapp_use and settings.promotion_hrvapp == 'appcombo' or settings.promotion_hrvapp == 'appbuyxgety' %}
 			<div class="gift product_gift_label d-none" data-id="{{product.id}}">
 				<img class="lazyload" data-src="{{ settings.combo_icon }}" 
