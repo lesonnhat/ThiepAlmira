@@ -94,21 +94,22 @@
 		{{ serverHead | remove: srcBuyXY2 | remove: srcBuyXY3 | remove: srcCombo2 | remove: srcCombo3 | remove: srcBuy2Get1_2 | remove: srcBuy2Get1_3 }}
 		{%-endif-%}
 		<script type="application/ld+json" defer>{"@context":"http://schema.org","@type":"WebSite","name":"{{shop.url | remove: 'https://' | remove: 'http://' }}","url":"{{shop.url}}","potentialAction":{"@type":"SearchAction","target":"{{shop.url}}/search?&q={search_term_string}","query-input":"required name=search_term_string"}}</script>
-		{% comment %}
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-																													new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-																})(window,document,'script','dataLayer','GTM-NP8HFM8');</script>
-		<!-- End Google Tag Manager -->	
-		{% endcomment %}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
 
     <meta name="p:domain_verify" content="33a484eea88fdfa917c6009a6419ace1"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQF1DS8SXP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-NQF1DS8SXP');
+    </script>
     
 	</head>
 	<body class="mainBody-theme {% if  cart.item_count > 0 %} mainBody-mbcart {% endif %} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" itemscope itemtype="http://schema.org/Website">
