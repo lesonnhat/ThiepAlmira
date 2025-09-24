@@ -175,27 +175,9 @@
 							</div>
 							{%- if collection.products.size > 0 -%}	
 							{%- if paginate.pages > 1 -%}
-              <nav class="collection-pagination" role="navigation" aria-label="Pagination">
-                <ul class="pagination-list">
-                  {%- if paginate.previous.is_link -%}
-                    <li><a class="prev" href="{{ paginate.previous.url }}" aria-label="Trang trước">←</a></li>
-                  {%- endif -%}
-              
-                  {%- for part in paginate.parts -%}
-                    {%- if part.is_link -%}
-                      <li><a href="{{ part.url }}">{{ part.title }}</a></li>
-                    {%- elsif part.title == paginate.current_page -%}
-                      <li><span class="is-current">{{ part.title }}</span></li>
-                    {%- else -%}
-                      <li><span class="ellipsis">…</span></li>
-                    {%- endif -%}
-                  {%- endfor -%}
-              
-                  {%- if paginate.next.is_link -%}
-                    <li><a class="next" href="{{ paginate.next.url }}" aria-label="Trang sau">→</a></li>
-                  {%- endif -%}
-                </ul>
-              </nav>
+                <div class="pagination-shop pagi text-center">
+                  {% include 'pagination-default' %}
+                </div>
               {%- endif -%}
 
 							{%- endif -%}	
@@ -447,7 +429,7 @@
               }
       
               // đang xem kết quả filter (AJAX) -> ẩn phân trang mặc định
-              $('.collection-pagination').hide();
+              $('.pagination-shop').hide();
             }, 300);
           }
         });
@@ -457,7 +439,7 @@
         );
         $('.title-count b').text('0');
         // Ẩn phân trang luôn khi không có kết quả
-        $('.collection-pagination').hide();
+        $('.pagination-shop').hide();
       }
 			var x = $('#collection-body').offset().top;
 			HRT.All.smoothScroll(x, 500); 
@@ -517,7 +499,7 @@
             }
       
             // Trở về danh sách gốc -> hiện lại phân trang
-            $('.collection-pagination').show();
+            $('.pagination-shop').hide();
           }, 400);
         }
       });
