@@ -2338,7 +2338,7 @@ $borderFt: {{settings.footer-color-title}};
 			align-self: center;padding-right: 20px;
 			h3 {
 				padding: 0;margin: 0;
-				position: relative;font-size: 20px;font-weight: 700; color:var(--footer-color-title);
+				position: relative;font-size: 18px;font-weight: 700; color:var(--footer-color-title);
 			}
 			.subTitle{color: var(--footer-color-text);font-weight: 400;font-size: 16px;margin: 0 auto 10px;}
 		}
@@ -6776,7 +6776,7 @@ body.open-filter {
 	}
 	@media(max-width: 767px){
 		.information-area--content {padding: 0;}
-		.information-area--content h3 {font-size: 20px;}
+		.information-area--content h3 {font-size: 18px;}
 	}
 }
 .section-about02-ecosystem {
@@ -8042,7 +8042,7 @@ PAGE FAQS
 	}
 	.box-article-detail{
 		h2{font-size: 22px;}
-		h3{font-size: 20px;}
+		h3{font-size: 18px;}
 		h4,h5,h6{font-size: 18px;}
 	}
 	.box-article-tags { font-size: 16px;}
@@ -8241,7 +8241,7 @@ PAGE FAQS
 		vertical-align: top;
 		white-space: normal;	
 	}
-	.inforArticle-content .article-comment .title-bl h3 {font-size: 20px;}
+	.inforArticle-content .article-comment .title-bl h3 {font-size: 18px;}
 	.inforArticle-content .post-navigation .flex-row-articleToolbar .articleToolbar--nav,
 	.inforArticle-content .post-navigation .flex-row-articleToolbar .articleToolbar-title p{text-align: center;}
 	.inforArticle-content .post-navigation .flex-row-articleToolbar .articleToolbar-title p{margin-bottom:20px;}
